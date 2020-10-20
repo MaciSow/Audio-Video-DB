@@ -96,67 +96,165 @@ CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.cpp -o CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.s
 
-CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
-CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o: ../Model/Person.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Person.cpp
+CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o: ../Model/Others/Person.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp
 
-CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Person.cpp > CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.i
+CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp > CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.i
 
-CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Person.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.s
+CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.s
 
-CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
-CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o: ../Model/Artist.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Artist.cpp
+CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o: ../Model/Others/Artist.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp
 
-CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Artist.cpp > CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.i
+CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp > CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.i
 
-CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Artist.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.s
+CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.s
 
-CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
-CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o: ../Model/Actor.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Actor.cpp
+CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o: ../Model/Others/Actor.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp
 
-CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Actor.cpp > CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.i
+CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp > CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.i
 
-CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Actor.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.s
+CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.s
 
-CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
-CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o: ../Model/Song.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Song.cpp
+CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o: ../Model/Others/Song.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp
 
-CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Song.cpp > CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.i
+CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp > CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.i
 
-CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Song.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.s
+CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o: ../Model/Position.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp > CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o: ../Model/Audio/Audio.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp > CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o: ../Model/Audio/AudioCd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.cpp > CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o: ../Model/Audio/AudioTape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp > CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o: ../Model/Video/Video.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.cpp > CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o: ../Model/Video/VideoTape.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp > CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.s
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o: CMakeFiles/Video_AudioDB.dir/flags.make
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o: ../Model/Video/VideoCd.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o -c /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.cpp
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.cpp > CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.i
+
+CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.cpp -o CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.s
 
 # Object files for target Video_AudioDB
 Video_AudioDB_OBJECTS = \
 "CMakeFiles/Video_AudioDB.dir/main.cpp.o" \
 "CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o" \
 "CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o" \
-"CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o" \
-"CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o" \
-"CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o" \
-"CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o"
+"CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o" \
+"CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o"
 
 # External object files for target Video_AudioDB
 Video_AudioDB_EXTERNAL_OBJECTS =
@@ -164,13 +262,20 @@ Video_AudioDB_EXTERNAL_OBJECTS =
 Video_AudioDB: CMakeFiles/Video_AudioDB.dir/main.cpp.o
 Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o
 Video_AudioDB: CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o
-Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o
-Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o
-Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o
-Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o
+Video_AudioDB: CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o
 Video_AudioDB: CMakeFiles/Video_AudioDB.dir/build.make
 Video_AudioDB: CMakeFiles/Video_AudioDB.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Video_AudioDB"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable Video_AudioDB"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Video_AudioDB.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -3,8 +3,8 @@
 
 #include <iostream>
 #include <string>
-#include "../Model/Artist.h"
-#include "../Model/Song.h"
+#include "../Model/Others/Artist.h"
+#include "../Model/Others/Song.h"
 
 using namespace std;
 

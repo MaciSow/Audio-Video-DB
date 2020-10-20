@@ -88,28 +88,70 @@
 		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Actor.cpp">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Actor.h">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Artist.cpp">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.cpp">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Artist.h">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Person.cpp">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Person.h">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Song.cpp">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp">
 			<Option target="Video_AudioDB"/>
 		</Unit>
-		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Song.h">
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
 		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.cpp">

@@ -4,10 +4,13 @@
 #include "Person.h"
 
 class Artist : public Person {
+private:
+    string nickName;
+
 public:
     Artist(const string &name, const string &surname, const string &nickName);
 
-    string nickName;
+    const string &getNickName() const;
 };
 
 

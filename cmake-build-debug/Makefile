@@ -150,113 +150,302 @@ Controller/MainController.cpp.s:
 	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.s
 .PHONY : Controller/MainController.cpp.s
 
-Model/Actor.o: Model/Actor.cpp.o
+Model/Audio/Audio.o: Model/Audio/Audio.cpp.o
 
-.PHONY : Model/Actor.o
-
-# target to build an object file
-Model/Actor.cpp.o:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.o
-.PHONY : Model/Actor.cpp.o
-
-Model/Actor.i: Model/Actor.cpp.i
-
-.PHONY : Model/Actor.i
-
-# target to preprocess a source file
-Model/Actor.cpp.i:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.i
-.PHONY : Model/Actor.cpp.i
-
-Model/Actor.s: Model/Actor.cpp.s
-
-.PHONY : Model/Actor.s
-
-# target to generate assembly for a file
-Model/Actor.cpp.s:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Actor.cpp.s
-.PHONY : Model/Actor.cpp.s
-
-Model/Artist.o: Model/Artist.cpp.o
-
-.PHONY : Model/Artist.o
+.PHONY : Model/Audio/Audio.o
 
 # target to build an object file
-Model/Artist.cpp.o:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.o
-.PHONY : Model/Artist.cpp.o
+Model/Audio/Audio.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o
+.PHONY : Model/Audio/Audio.cpp.o
 
-Model/Artist.i: Model/Artist.cpp.i
+Model/Audio/Audio.i: Model/Audio/Audio.cpp.i
 
-.PHONY : Model/Artist.i
+.PHONY : Model/Audio/Audio.i
 
 # target to preprocess a source file
-Model/Artist.cpp.i:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.i
-.PHONY : Model/Artist.cpp.i
+Model/Audio/Audio.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.i
+.PHONY : Model/Audio/Audio.cpp.i
 
-Model/Artist.s: Model/Artist.cpp.s
+Model/Audio/Audio.s: Model/Audio/Audio.cpp.s
 
-.PHONY : Model/Artist.s
+.PHONY : Model/Audio/Audio.s
 
 # target to generate assembly for a file
-Model/Artist.cpp.s:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Artist.cpp.s
-.PHONY : Model/Artist.cpp.s
+Model/Audio/Audio.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.s
+.PHONY : Model/Audio/Audio.cpp.s
 
-Model/Person.o: Model/Person.cpp.o
+Model/Audio/AudioCd.o: Model/Audio/AudioCd.cpp.o
 
-.PHONY : Model/Person.o
+.PHONY : Model/Audio/AudioCd.o
 
 # target to build an object file
-Model/Person.cpp.o:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.o
-.PHONY : Model/Person.cpp.o
+Model/Audio/AudioCd.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.o
+.PHONY : Model/Audio/AudioCd.cpp.o
 
-Model/Person.i: Model/Person.cpp.i
+Model/Audio/AudioCd.i: Model/Audio/AudioCd.cpp.i
 
-.PHONY : Model/Person.i
+.PHONY : Model/Audio/AudioCd.i
 
 # target to preprocess a source file
-Model/Person.cpp.i:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.i
-.PHONY : Model/Person.cpp.i
+Model/Audio/AudioCd.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.i
+.PHONY : Model/Audio/AudioCd.cpp.i
 
-Model/Person.s: Model/Person.cpp.s
+Model/Audio/AudioCd.s: Model/Audio/AudioCd.cpp.s
 
-.PHONY : Model/Person.s
+.PHONY : Model/Audio/AudioCd.s
 
 # target to generate assembly for a file
-Model/Person.cpp.s:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Person.cpp.s
-.PHONY : Model/Person.cpp.s
+Model/Audio/AudioCd.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioCd.cpp.s
+.PHONY : Model/Audio/AudioCd.cpp.s
 
-Model/Song.o: Model/Song.cpp.o
+Model/Audio/AudioTape.o: Model/Audio/AudioTape.cpp.o
 
-.PHONY : Model/Song.o
+.PHONY : Model/Audio/AudioTape.o
 
 # target to build an object file
-Model/Song.cpp.o:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.o
-.PHONY : Model/Song.cpp.o
+Model/Audio/AudioTape.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o
+.PHONY : Model/Audio/AudioTape.cpp.o
 
-Model/Song.i: Model/Song.cpp.i
+Model/Audio/AudioTape.i: Model/Audio/AudioTape.cpp.i
 
-.PHONY : Model/Song.i
+.PHONY : Model/Audio/AudioTape.i
 
 # target to preprocess a source file
-Model/Song.cpp.i:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.i
-.PHONY : Model/Song.cpp.i
+Model/Audio/AudioTape.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.i
+.PHONY : Model/Audio/AudioTape.cpp.i
 
-Model/Song.s: Model/Song.cpp.s
+Model/Audio/AudioTape.s: Model/Audio/AudioTape.cpp.s
 
-.PHONY : Model/Song.s
+.PHONY : Model/Audio/AudioTape.s
 
 # target to generate assembly for a file
-Model/Song.cpp.s:
-	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Song.cpp.s
-.PHONY : Model/Song.cpp.s
+Model/Audio/AudioTape.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.s
+.PHONY : Model/Audio/AudioTape.cpp.s
+
+Model/Others/Actor.o: Model/Others/Actor.cpp.o
+
+.PHONY : Model/Others/Actor.o
+
+# target to build an object file
+Model/Others/Actor.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o
+.PHONY : Model/Others/Actor.cpp.o
+
+Model/Others/Actor.i: Model/Others/Actor.cpp.i
+
+.PHONY : Model/Others/Actor.i
+
+# target to preprocess a source file
+Model/Others/Actor.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.i
+.PHONY : Model/Others/Actor.cpp.i
+
+Model/Others/Actor.s: Model/Others/Actor.cpp.s
+
+.PHONY : Model/Others/Actor.s
+
+# target to generate assembly for a file
+Model/Others/Actor.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.s
+.PHONY : Model/Others/Actor.cpp.s
+
+Model/Others/Artist.o: Model/Others/Artist.cpp.o
+
+.PHONY : Model/Others/Artist.o
+
+# target to build an object file
+Model/Others/Artist.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o
+.PHONY : Model/Others/Artist.cpp.o
+
+Model/Others/Artist.i: Model/Others/Artist.cpp.i
+
+.PHONY : Model/Others/Artist.i
+
+# target to preprocess a source file
+Model/Others/Artist.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.i
+.PHONY : Model/Others/Artist.cpp.i
+
+Model/Others/Artist.s: Model/Others/Artist.cpp.s
+
+.PHONY : Model/Others/Artist.s
+
+# target to generate assembly for a file
+Model/Others/Artist.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.s
+.PHONY : Model/Others/Artist.cpp.s
+
+Model/Others/Person.o: Model/Others/Person.cpp.o
+
+.PHONY : Model/Others/Person.o
+
+# target to build an object file
+Model/Others/Person.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o
+.PHONY : Model/Others/Person.cpp.o
+
+Model/Others/Person.i: Model/Others/Person.cpp.i
+
+.PHONY : Model/Others/Person.i
+
+# target to preprocess a source file
+Model/Others/Person.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.i
+.PHONY : Model/Others/Person.cpp.i
+
+Model/Others/Person.s: Model/Others/Person.cpp.s
+
+.PHONY : Model/Others/Person.s
+
+# target to generate assembly for a file
+Model/Others/Person.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.s
+.PHONY : Model/Others/Person.cpp.s
+
+Model/Others/Song.o: Model/Others/Song.cpp.o
+
+.PHONY : Model/Others/Song.o
+
+# target to build an object file
+Model/Others/Song.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o
+.PHONY : Model/Others/Song.cpp.o
+
+Model/Others/Song.i: Model/Others/Song.cpp.i
+
+.PHONY : Model/Others/Song.i
+
+# target to preprocess a source file
+Model/Others/Song.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.i
+.PHONY : Model/Others/Song.cpp.i
+
+Model/Others/Song.s: Model/Others/Song.cpp.s
+
+.PHONY : Model/Others/Song.s
+
+# target to generate assembly for a file
+Model/Others/Song.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.s
+.PHONY : Model/Others/Song.cpp.s
+
+Model/Position.o: Model/Position.cpp.o
+
+.PHONY : Model/Position.o
+
+# target to build an object file
+Model/Position.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o
+.PHONY : Model/Position.cpp.o
+
+Model/Position.i: Model/Position.cpp.i
+
+.PHONY : Model/Position.i
+
+# target to preprocess a source file
+Model/Position.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.i
+.PHONY : Model/Position.cpp.i
+
+Model/Position.s: Model/Position.cpp.s
+
+.PHONY : Model/Position.s
+
+# target to generate assembly for a file
+Model/Position.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.s
+.PHONY : Model/Position.cpp.s
+
+Model/Video/Video.o: Model/Video/Video.cpp.o
+
+.PHONY : Model/Video/Video.o
+
+# target to build an object file
+Model/Video/Video.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.o
+.PHONY : Model/Video/Video.cpp.o
+
+Model/Video/Video.i: Model/Video/Video.cpp.i
+
+.PHONY : Model/Video/Video.i
+
+# target to preprocess a source file
+Model/Video/Video.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.i
+.PHONY : Model/Video/Video.cpp.i
+
+Model/Video/Video.s: Model/Video/Video.cpp.s
+
+.PHONY : Model/Video/Video.s
+
+# target to generate assembly for a file
+Model/Video/Video.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/Video.cpp.s
+.PHONY : Model/Video/Video.cpp.s
+
+Model/Video/VideoCd.o: Model/Video/VideoCd.cpp.o
+
+.PHONY : Model/Video/VideoCd.o
+
+# target to build an object file
+Model/Video/VideoCd.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.o
+.PHONY : Model/Video/VideoCd.cpp.o
+
+Model/Video/VideoCd.i: Model/Video/VideoCd.cpp.i
+
+.PHONY : Model/Video/VideoCd.i
+
+# target to preprocess a source file
+Model/Video/VideoCd.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.i
+.PHONY : Model/Video/VideoCd.cpp.i
+
+Model/Video/VideoCd.s: Model/Video/VideoCd.cpp.s
+
+.PHONY : Model/Video/VideoCd.s
+
+# target to generate assembly for a file
+Model/Video/VideoCd.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoCd.cpp.s
+.PHONY : Model/Video/VideoCd.cpp.s
+
+Model/Video/VideoTape.o: Model/Video/VideoTape.cpp.o
+
+.PHONY : Model/Video/VideoTape.o
+
+# target to build an object file
+Model/Video/VideoTape.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o
+.PHONY : Model/Video/VideoTape.cpp.o
+
+Model/Video/VideoTape.i: Model/Video/VideoTape.cpp.i
+
+.PHONY : Model/Video/VideoTape.i
+
+# target to preprocess a source file
+Model/Video/VideoTape.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.i
+.PHONY : Model/Video/VideoTape.cpp.i
+
+Model/Video/VideoTape.s: Model/Video/VideoTape.cpp.s
+
+.PHONY : Model/Video/VideoTape.s
+
+# target to generate assembly for a file
+Model/Video/VideoTape.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.s
+.PHONY : Model/Video/VideoTape.cpp.s
 
 View/ConsoleView.o: View/ConsoleView.cpp.o
 
@@ -324,18 +513,39 @@ help:
 	@echo "... Controller/MainController.o"
 	@echo "... Controller/MainController.i"
 	@echo "... Controller/MainController.s"
-	@echo "... Model/Actor.o"
-	@echo "... Model/Actor.i"
-	@echo "... Model/Actor.s"
-	@echo "... Model/Artist.o"
-	@echo "... Model/Artist.i"
-	@echo "... Model/Artist.s"
-	@echo "... Model/Person.o"
-	@echo "... Model/Person.i"
-	@echo "... Model/Person.s"
-	@echo "... Model/Song.o"
-	@echo "... Model/Song.i"
-	@echo "... Model/Song.s"
+	@echo "... Model/Audio/Audio.o"
+	@echo "... Model/Audio/Audio.i"
+	@echo "... Model/Audio/Audio.s"
+	@echo "... Model/Audio/AudioCd.o"
+	@echo "... Model/Audio/AudioCd.i"
+	@echo "... Model/Audio/AudioCd.s"
+	@echo "... Model/Audio/AudioTape.o"
+	@echo "... Model/Audio/AudioTape.i"
+	@echo "... Model/Audio/AudioTape.s"
+	@echo "... Model/Others/Actor.o"
+	@echo "... Model/Others/Actor.i"
+	@echo "... Model/Others/Actor.s"
+	@echo "... Model/Others/Artist.o"
+	@echo "... Model/Others/Artist.i"
+	@echo "... Model/Others/Artist.s"
+	@echo "... Model/Others/Person.o"
+	@echo "... Model/Others/Person.i"
+	@echo "... Model/Others/Person.s"
+	@echo "... Model/Others/Song.o"
+	@echo "... Model/Others/Song.i"
+	@echo "... Model/Others/Song.s"
+	@echo "... Model/Position.o"
+	@echo "... Model/Position.i"
+	@echo "... Model/Position.s"
+	@echo "... Model/Video/Video.o"
+	@echo "... Model/Video/Video.i"
+	@echo "... Model/Video/Video.s"
+	@echo "... Model/Video/VideoCd.o"
+	@echo "... Model/Video/VideoCd.i"
+	@echo "... Model/Video/VideoCd.s"
+	@echo "... Model/Video/VideoTape.o"
+	@echo "... Model/Video/VideoTape.i"
+	@echo "... Model/Video/VideoTape.s"
 	@echo "... View/ConsoleView.o"
 	@echo "... View/ConsoleView.i"
 	@echo "... View/ConsoleView.s"

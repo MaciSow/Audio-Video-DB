@@ -5,13 +5,13 @@ void ConsoleView::showTxt(string txt) {
 }
 
 void ConsoleView::showArtist(Artist *artist) {
-    cout << artist->nickName << endl << artist->name << " " << artist->surname;
+    cout << artist->getNickName() << endl << artist->getName() << " " << artist->getSurname();
 }
 
 void ConsoleView::showSong(Song *song) {
-    cout << song->title << endl;
-    for (auto artist : song->artists) {
+    cout << song->getTitle() << endl;
+    for (auto artist : song->getArtists()) {
         showArtist(artist);
     }
-    cout << endl << song->length << endl;
+    cout << endl << song->getLength() << endl;
 }
