@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o"
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o"
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o"
+  "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o"
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o"
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o"
   "/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp" "/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o"

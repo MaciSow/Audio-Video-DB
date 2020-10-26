@@ -118,6 +118,12 @@
 		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h">
 			<Option target="Video_AudioDB"/>
 		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.cpp">
+			<Option target="Video_AudioDB"/>
+		</Unit>
+		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h">
+			<Option target="Video_AudioDB"/>
+		</Unit>
 		<Unit filename="/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp">
 			<Option target="Video_AudioDB"/>
 		</Unit>

@@ -4,9 +4,18 @@
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.cpp
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
 CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp
@@ -39,6 +48,20 @@ CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.cpp
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
 CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
@@ -71,11 +94,32 @@ CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.cpp
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
 CMakeFiles/Video_AudioDB.dir/main.cpp.o
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
+ /mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
  /mnt/d/Studies/PK/Projekt/Video-AudioDB/main.cpp

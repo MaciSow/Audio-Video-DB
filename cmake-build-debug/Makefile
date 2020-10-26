@@ -285,6 +285,33 @@ Model/Others/Artist.cpp.s:
 	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.s
 .PHONY : Model/Others/Artist.cpp.s
 
+Model/Others/File.o: Model/Others/File.cpp.o
+
+.PHONY : Model/Others/File.o
+
+# target to build an object file
+Model/Others/File.cpp.o:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o
+.PHONY : Model/Others/File.cpp.o
+
+Model/Others/File.i: Model/Others/File.cpp.i
+
+.PHONY : Model/Others/File.i
+
+# target to preprocess a source file
+Model/Others/File.cpp.i:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.i
+.PHONY : Model/Others/File.cpp.i
+
+Model/Others/File.s: Model/Others/File.cpp.s
+
+.PHONY : Model/Others/File.s
+
+# target to generate assembly for a file
+Model/Others/File.cpp.s:
+	$(MAKE) -f CMakeFiles/Video_AudioDB.dir/build.make CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.s
+.PHONY : Model/Others/File.cpp.s
+
 Model/Others/Person.o: Model/Others/Person.cpp.o
 
 .PHONY : Model/Others/Person.o
@@ -528,6 +555,9 @@ help:
 	@echo "... Model/Others/Artist.o"
 	@echo "... Model/Others/Artist.i"
 	@echo "... Model/Others/Artist.s"
+	@echo "... Model/Others/File.o"
+	@echo "... Model/Others/File.i"
+	@echo "... Model/Others/File.s"
 	@echo "... Model/Others/Person.o"
 	@echo "... Model/Others/Person.i"
 	@echo "... Model/Others/Person.s"

@@ -5,14 +5,14 @@
 
 class VideoTape : public Video {
 private:
-    float lenght;
+    float length;
 public:
-    VideoTape(const string &name, int year, const string &type, const Person &director,
-              const vector<Actor *> &cast, float lenght);
+    VideoTape(const string &name, int year, const string &type, const string &genre,
+              const vector<Actor *> &cast, float length);
 
-    float getLenght() const;
+    float getLength() const;
 
-    void setLenght(float lenght);
+    void setLength(float length);
 };
 
 #endif //VIDEO_AUDIODB_VIDEOTAPE_H

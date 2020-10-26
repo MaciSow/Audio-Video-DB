@@ -3,9 +3,18 @@
 
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Controller/MainController.cpp
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Controller/MainController.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Audio/Audio.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Audio/AudioCd.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Audio/AudioTape.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Others/Actor.h
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Others/Artist.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Others/File.h
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Others/Person.h
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Others/Song.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Position.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Video/Video.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Video/VideoCd.h
+CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../Model/Video/VideoTape.h
 CMakeFiles/Video_AudioDB.dir/Controller/MainController.cpp.o: ../View/ConsoleView.h
 
 CMakeFiles/Video_AudioDB.dir/Model/Audio/Audio.cpp.o: ../Model/Audio/Audio.cpp
@@ -39,6 +48,20 @@ CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o: ../Model/Others/Artist.c
 CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o: ../Model/Others/Artist.h
 CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o: ../Model/Others/Person.h
 
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Audio/Audio.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Audio/AudioCd.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Audio/AudioTape.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/Actor.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/Artist.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/File.cpp
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/File.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/Person.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Others/Song.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Position.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Video/Video.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Video/VideoCd.h
+CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o: ../Model/Video/VideoTape.h
+
 CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o: ../Model/Others/Person.cpp
 CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o: ../Model/Others/Person.h
 
@@ -70,12 +93,33 @@ CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o: ../Model/Video/Video.h
 CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o: ../Model/Video/VideoTape.cpp
 CMakeFiles/Video_AudioDB.dir/Model/Video/VideoTape.cpp.o: ../Model/Video/VideoTape.h
 
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Audio/Audio.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Audio/AudioCd.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Audio/AudioTape.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Others/Actor.h
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Others/Artist.h
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Others/Person.h
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Others/Song.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Position.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Video/Video.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Video/VideoCd.h
+CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../Model/Video/VideoTape.h
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../View/ConsoleView.cpp
 CMakeFiles/Video_AudioDB.dir/View/ConsoleView.cpp.o: ../View/ConsoleView.h
 
 CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Controller/MainController.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Audio/Audio.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Audio/AudioCd.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Audio/AudioTape.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Others/Actor.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Others/Artist.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Others/File.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Others/Person.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Others/Song.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Position.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Video/Video.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Video/VideoCd.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../Model/Video/VideoTape.h
+CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../View/ConsoleView.h
 CMakeFiles/Video_AudioDB.dir/main.cpp.o: ../main.cpp
 

@@ -1,13 +1,13 @@
 #include "VideoTape.h"
 
-VideoTape::VideoTape(const string &name, int year, const string &type, const Person &director,
-                     const vector<Actor *> &cast, float lenght)
-        : Video(name, year, type, director, cast), lenght(lenght) {}
+VideoTape::VideoTape(const string &name, int year, const string &type, const string &genre,
+                     const vector<Actor *> &cast, float length)
+        : Video(name, year, type, genre, cast), length(length) {}
 
-float VideoTape::getLenght() const {
-    return lenght;
+float VideoTape::getLength() const {
+    return length;
 }
 
-void VideoTape::setLenght(float lenght) {
-    VideoTape::lenght = lenght;
+void VideoTape::setLength(float lenght) {
+    VideoTape::length = length;
 }

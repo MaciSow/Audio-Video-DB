@@ -6,73 +6,63 @@
 
 #IncludeRegexTransform: 
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.cpp
-iostream
--
-MainController.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
-../View/ConsoleView.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
-iostream
--
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.cpp
-Audio.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
 ../Position.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
 ../Others/Song.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.cpp
-AudioCd.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
 Audio.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.cpp
-AudioTape.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
 
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
 Audio.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.cpp
-Actor.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
 Person.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.cpp
-Artist.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
 
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
 Person.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.cpp
-Person.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.cpp
+File.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
 iostream
 -
 string
 -
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.cpp
+fstream
+-
+vector
+-
+Artist.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
 Song.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+Actor.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
+../Position.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+../Audio/AudioCd.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+../Audio/AudioTape.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+../Video/VideoCd.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+../Video/VideoTape.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
+
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
+iostream
+-
+string
+-
 
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
 iostream
@@ -84,10 +74,6 @@ vector
 Artist.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.cpp
-Position.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
 iostream
 -
@@ -95,10 +81,6 @@ string
 -
 vector
 -
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.cpp
-Video.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
 
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
 ../Position.h
@@ -108,33 +90,11 @@ Video.h
 ../Others/Actor.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Actor.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.cpp
-VideoCd.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
 Video.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
 
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.cpp
-VideoTape.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
-
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
 Video.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.cpp
-ConsoleView.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
-iostream
--
-string
--
-../Model/Others/Artist.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
-../Model/Others/Song.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
 

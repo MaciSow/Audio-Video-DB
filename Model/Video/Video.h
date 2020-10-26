@@ -7,14 +7,14 @@
 
 class Video : public Position {
 protected:
-    Person director;
+    string genre;
     vector<Actor *> cast;
 public:
-    Video(const string &name, int year, const string &type, const Person &director, const vector<Actor *> &cast);
+    Video(const string &name, int year, const string &type, const string &genre, const vector<Actor *> &cast);
 
-    const Person &getDirector() const;
+    const string &getGenre() const;
 
-    void setDirector(const Person &director);
+    void setGenre(const string &genre);
 
     const vector<Actor *> &getCast() const;
 

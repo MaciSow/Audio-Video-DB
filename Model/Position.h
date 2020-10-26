@@ -13,6 +13,8 @@ protected:
     int year;
     string type;
 public:
+    Position *nextP;
+
     Position(const string &name, int year, const string &type);
 
     const string &getName() const;
@@ -26,6 +28,8 @@ public:
     const string &getType() const;
 
     void setType(const string &type);
+
+    virtual ~Position() = default;
 };
 
 

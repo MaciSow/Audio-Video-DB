@@ -1,16 +1,12 @@
 #include <iostream>
 #include "MainController.h"
-#include "../View/ConsoleView.h"
 
 void MainController::show() {
     ConsoleView *console = new ConsoleView;
-    console->showTxt("Hello 🐶");
 
-    Artist *artist = new Artist("Bogdan", "Drugi", "Bogdanooo");
+    File *f1 = new File();
 
-    vector<Artist *> vec;
-    vec.push_back(artist);
-    Song *song = new Song("Lala", vec, 134);
+    Position *list = f1->readData("../Carrier.txt");
 
-    console->showSong(song);
+    console->showList(list);
 }

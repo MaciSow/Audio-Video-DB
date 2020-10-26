@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/Video_AudioDB.dir/Model/Audio/AudioTape.cpp.o"
   "CMakeFiles/Video_AudioDB.dir/Model/Others/Actor.cpp.o"
   "CMakeFiles/Video_AudioDB.dir/Model/Others/Artist.cpp.o"
+  "CMakeFiles/Video_AudioDB.dir/Model/Others/File.cpp.o"
   "CMakeFiles/Video_AudioDB.dir/Model/Others/Person.cpp.o"
   "CMakeFiles/Video_AudioDB.dir/Model/Others/Song.cpp.o"
   "CMakeFiles/Video_AudioDB.dir/Model/Position.cpp.o"
