@@ -9,6 +9,8 @@ private:
 public:
     AudioCd(const string &name, int year, const string &type, const vector<Song *> &songs, float size);
 
+    void update(const string &name, int year, const string &type, const vector<Song *> &songs, float size);
+
     float getSize() const;
 
     void setSize(float size);

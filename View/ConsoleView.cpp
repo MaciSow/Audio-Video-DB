@@ -26,12 +26,16 @@ void ConsoleView::showList(Position *list) {
     cout << endl << "=========CONSOLE VIEW=========" << endl;
     while (list) {
         if (AudioCd *audioCd = dynamic_cast<AudioCd *>(list)) {
+            cout << "\n-----------AUDIO CD----------" << endl;
             showAudioCd(audioCd);
         } else if (AudioTape *audioTape = dynamic_cast<AudioTape *>(list)) {
+            cout << "\n----------AUDIO TAPE---------" << endl;
             showAudioTape(audioTape);
         } else if (VideoCd *videoCd = dynamic_cast<VideoCd *>(list)) {
+            cout << "\n-----------VIDEO CD----------" << endl;
             showVideoCd(videoCd);
         } else if (VideoTape *videoTape = dynamic_cast<VideoTape *>(list)) {
+            cout << "\n----------VIDEO TAPE---------" << endl;
             showVideoTape(videoTape);
         } else {
             cout << "Type Error" << endl;
@@ -77,4 +81,70 @@ void ConsoleView::showVideoTape(VideoTape *videoTape) {
     for (auto actor : videoTape->getCast()) {
         showActor(actor);
     }
+}
+
+//---------------------------------------
+
+vector<string> ConsoleView::getAudioData() {
+    string name, year, type, size;
+    vector<string> data;
+
+    name = "Twist and shout";
+    year = "2000";
+    type = "CD";
+    size = "5";
+
+    data.push_back(name);
+    data.push_back(year);
+    data.push_back(type);
+    data.push_back(size);
+
+    return data;
+}
+
+vector<string> ConsoleView::getSongData() {
+    string title, length;
+    vector<string> data;
+
+    title = "hello";
+    length = "30";
+
+    data.push_back(title);
+    data.push_back(length);
+
+    return data;
+}
+
+vector<string> ConsoleView::getVideoData() {
+    string name, year, type, size, genre;
+    vector<string> data;
+
+    name = "Matrix";
+    year = "2008";
+    type = "DVD";
+    genre = "science fiction";
+    size = "4024";
+
+    data.push_back(name);
+    data.push_back(year);
+    data.push_back(type);
+    data.push_back(genre);
+    data.push_back(size);
+
+    return data;
+}
+
+vector<string> ConsoleView::getPersonData() {
+    string name, surname, nickname;
+    vector<string> data;
+
+    name = "Jennifer";
+    surname = "Lopez";
+    nickname = "J.LO";
+
+    data.push_back(name);
+    data.push_back(surname);
+    data.push_back(nickname);
+
+    return data;
 }

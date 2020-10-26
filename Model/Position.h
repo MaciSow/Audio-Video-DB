@@ -12,7 +12,14 @@ protected:
     string name;
     int year;
     string type;
+
 public:
+    void addToList(Position *&list);
+
+    void addToList2(Position *&element);
+
+    void deleteFromList(Position *&list);
+
     Position *nextP;
 
     Position(const string &name, int year, const string &type);
@@ -30,6 +37,7 @@ public:
     void setType(const string &type);
 
     virtual ~Position() = default;
+
 };
 
 

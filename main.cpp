@@ -3,10 +3,10 @@
 
 using namespace std;
 
+
 int main() {
 
     MainController *c1 = new MainController();
-    c1->show();
-
+    c1->home();
     return 0;
 }

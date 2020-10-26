@@ -10,8 +10,23 @@
 using namespace std;
 
 class MainController {
+private:
+    Position *list;
+    ConsoleView *view;
+
+    void createElement(Type type);
+
+    Position *createAudio(Type type);
+
+    Position *createVideo(Type type);
+
+    void editElement(Position *&element);
+
 public:
-    void show();
+    MainController();
+
+    void home();
+
 };
 
 #endif //VIDEO_AUDIODB_MAINCONTROLLER_H

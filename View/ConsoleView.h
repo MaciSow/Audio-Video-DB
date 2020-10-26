@@ -15,23 +15,35 @@ using namespace std;
 
 class ConsoleView {
 public:
+    void showArtist(Artist *artist);
+
+    void showActor(Actor *actor);
+
+    void showAudioCd(AudioCd *audioCd);
+
+    void showAudioTape(AudioTape *audioTape);
+
+    void showVideoCd(VideoCd *videoCd);
+
+    void showVideoTape(VideoTape *videoTape);
+
+    void showSong(Song *song);
+
+    void showList(Position *list);
+
+//---------------------
+    vector<string> getAudioData();
+
+    vector<string> getSongData();
+
+    vector<string> getArtistData();
+//---------------------
+
     void showTxt(string txt);
 
-    void showArtist(Artist* artist);
+    vector<string> getVideoData();
 
-    void showActor(Actor* actor);
-
-    void showAudioCd(AudioCd* audioCd);
-
-    void showAudioTape(AudioTape* audioTape);
-
-    void showVideoCd(VideoCd* videoCd);
-
-    void showVideoTape(VideoTape* videoTape);
-
-    void showSong(Song* song);
-
-    void showList(Position * list);
+    vector<string> getPersonData();
 };
 
 #endif //VIDEO_AUDIODB_CONSOLEVIEW_H

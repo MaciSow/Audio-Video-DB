@@ -10,6 +10,9 @@ public:
     VideoCd(const string &name, int year, const string &type, const string &genre,
             const vector<Actor *> &cast, float size);
 
+    void update(const string &name, int year, const string &type, const string &genre,
+                const vector<Actor *> &cast, float size);
+
     float getSize() const;
 
     void setSize(float size);

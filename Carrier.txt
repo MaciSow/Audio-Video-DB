@@ -45,7 +45,7 @@
   year: 2008
   type: DVD
   size: 4024
-  director: Warner Bross
+  genre: science fiction
   cast:
     - name: Keanu
       surname: Reeves

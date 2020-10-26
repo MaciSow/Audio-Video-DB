@@ -16,11 +16,20 @@
 
 using namespace std;
 
+enum Type {
+    ERROR,
+    AUDIO_CD,
+    AUDIO_TAPE,
+    VIDEO_CD,
+    VIDEO_TAPE
+};
+
+
 class File {
 private:
     string fileName;
 
-    int getClassNumber(string className);
+    Type getClassNumber(string className);
 
     string getValue(ifstream &File);
 

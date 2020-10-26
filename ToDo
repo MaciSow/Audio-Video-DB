@@ -18,6 +18,6 @@ View
     -menu
     -create
     -show el
-    -show li
+    -home li
     -overwrite window
     -filter

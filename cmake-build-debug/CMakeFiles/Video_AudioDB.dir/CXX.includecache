@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.cpp
+iostream
+-
+MainController.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
+
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Controller/MainController.h
+typeinfo
+-
+iostream
+-
+../View/ConsoleView.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
+../Model/Others/File.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
+../Model/Position.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/Audio.h
 ../Position.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
@@ -27,10 +45,6 @@ Person.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
 Person.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Person.h
-
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.cpp
-File.h
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
 
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/File.h
 iostream
@@ -97,4 +111,24 @@ Video.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
 Video.h
 /mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/Video.h
+
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/View/ConsoleView.h
+iostream
+-
+string
+-
+../Model/Others/Artist.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Artist.h
+../Model/Others/Song.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Others/Song.h
+../Model/Position.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Position.h
+../Model/Audio/AudioCd.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioCd.h
+../Model/Audio/AudioTape.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Audio/AudioTape.h
+../Model/Video/VideoCd.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoCd.h
+../Model/Video/VideoTape.h
+/mnt/d/Studies/PK/Projekt/Video-AudioDB/Model/Video/VideoTape.h
 

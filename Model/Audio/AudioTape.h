@@ -9,6 +9,8 @@ private:
 public:
     AudioTape(const string &name, int year, const string &type, const vector<Song *> &songs, float length);
 
+    void update(const string &name, int year, const string &type, const vector<Song *> &songs, float length);
+
     float getLength() const;
 
     void setLength(float length);

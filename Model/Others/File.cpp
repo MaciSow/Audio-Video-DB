@@ -18,24 +18,28 @@ Position *File::readData(string fileName) {
         while (!File.eof() && validClass) {
             if (tmp.substr(0, 8) == "- class:") {
                 string classType = cropValue(tmp);;
+                Position *element = nullptr;
 
                 switch (getClassNumber(classType)) {
-                    case 1:
-                        addToList(list, readAudioCd(File, tmp));
+                    case AUDIO_CD:
+                        element = readAudioCd(File, tmp);
                         break;
-                    case 2:
-                        addToList(list, readAudioTape(File, tmp));
+                    case AUDIO_TAPE:
+                        element = readAudioTape(File, tmp);
                         break;
-                    case 3:
-                        addToList(list, readVideoCd(File, tmp));
+                    case VIDEO_CD:
+                        element = readVideoCd(File, tmp);
                         break;
-                    case 4:
-                        addToList(list, readVideoTape(File, tmp));
+                    case VIDEO_TAPE:
+                        element = readVideoTape(File, tmp);
                         break;
                     default:
                         cout << "Invalid class" << endl;
                         validClass = false;
                         break;
+                }
+                if (element) {
+                    element->addToList(list);
                 }
             }
         }
@@ -45,21 +49,21 @@ Position *File::readData(string fileName) {
     }
 }
 
-int File::getClassNumber(string className) {
+Type File::getClassNumber(string className) {
 
     if (className == "AudioCd") {
-        return 1;
+        return AUDIO_CD;
     }
     if (className == "AudioTape") {
-        return 2;
+        return AUDIO_TAPE;
     }
     if (className == "VideoCd") {
-        return 3;
+        return VIDEO_CD;
     }
     if (className == "VideoTape") {
-        return 4;
+        return VIDEO_TAPE;
     }
-    return 0;
+    return ERROR;
 }
 
 string File::getValue(ifstream &File) {

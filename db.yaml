@@ -45,7 +45,7 @@
   year: 2008
   type: DVD
   size: 4024
-  director: Warner Bross
+  genre: science fiction
   cast:
     - name: Keanu
       surname: Reeves
@@ -58,7 +58,7 @@
   year: 1997
   type: VHS
   length: 4024
-  director: Columbia Tristar
+  genre: action
   cast:
     - name: Aidan
       surname: Quinn
