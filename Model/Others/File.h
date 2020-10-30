@@ -51,9 +51,24 @@ private:
 
     void addToList(Position *&list, Position *element);
 
+    void printAudioCd(ofstream &File, AudioCd *audioCd);
+
+    void printAudioTape(ofstream &File, AudioTape *audioTape);
+
+    void printVideoCd(ofstream &File, VideoCd *videoCd);
+
+    void printVideoTape(ofstream &File, VideoTape *videoTape);
+
+    void printPositionData(ofstream &File, Position *position);
+
+    void printSong(ofstream &File, Audio *audio);
+
+    void printCast(ofstream &File, Video *video);
 
 public:
     Position *readData(string fileName);
+
+    string saveData(Position *list, string fileName = "");
 
 };
 

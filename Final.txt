@@ -6,13 +6,13 @@
   songs:
     - title: hello
       length: 30
-      artists:
+      artist: 
         - name: Jennifer
           surname: Lopez
           nickname: J.LO
     - title: coffee
       length: 30
-      artists:
+      artist: 
         - name: Damian
           surname: Sowinski
           nickname: Rico
@@ -27,13 +27,13 @@
   songs:
     - title: Hippy Hippy Shake
       length: 186
-      artists:
+      artist: 
         - name: Soven
           surname: Mc Rae
           nickname: Romeo
     - title: Please Please Me
       length: 135
-      artists:
+      artist: 
         - name: John
           surname: Carr
           nickname: Lennon
@@ -49,20 +49,20 @@
   cast:
     - name: Keanu
       surname: Reeves
-      role: Neo
+      nickname: Neo
     - name: Laurence
       surname: Fishburne
-      role: He
-- class: VideoTape
+      nickname: He
+- class: videoTape
   name: Misja Specjalna
   year: 1997
   type: VHS
-  length: 4024
+  size: 4024
   genre: action
   cast:
     - name: Aidan
       surname: Quinn
-      role: HE
+      nickname: HE
     - name: Donald
       surname: Sutherland
-      role: She
+      nickname: She

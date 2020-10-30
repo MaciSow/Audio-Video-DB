@@ -12,7 +12,11 @@ void MainController::home() {
 
     File *f1 = new File();
 
+
     this->list = f1->readData("../Carrier.txt");
+//    this->list = f1->readData("../db.yaml");
+
+    f1->saveData(this->list,"../Final.txt");
 
     view->showList(list);
 }

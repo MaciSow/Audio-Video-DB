@@ -42,11 +42,12 @@ void Position::addToList(Position *&list) {
 
 void Position::addToList2(Position *&element) {
 
-    if (this == nullptr) {
-//        ^element;
+    Position *tmp = nullptr;
+    if (this == tmp) {
+//        this = element;
     }
 
-    Position *tmp = this;
+//    Position *tmp = this;
 
     while (this->nextP) {
         tmp = tmp->nextP;

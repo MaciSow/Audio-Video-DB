@@ -40,6 +40,7 @@ Position *File::readData(string fileName) {
                 }
                 if (element) {
                     element->addToList(list);
+//                    list->addToList2(element);
                 }
             }
         }
@@ -204,3 +205,102 @@ void File::addToList(Position *&list, Position *element) {
         element->nextP = 0;
     }
 }
+
+string File::saveData(Position *list, string fileName) {
+
+    if (fileName != "") {
+        this->fileName = fileName;
+    }
+
+    ofstream File(fileName);
+    if (File.is_open()) {
+        while (list) {
+            if (AudioCd *audioCd = dynamic_cast<AudioCd *>(list)) {
+                printAudioCd(File, audioCd);
+            } else if (AudioTape *audioTape = dynamic_cast<AudioTape *>(list)) {
+                printAudioTape(File, audioTape);
+            } else if (VideoCd *videoCd = dynamic_cast<VideoCd *>(list)) {
+                printVideoCd(File, videoCd);
+            } else if (VideoTape *videoTape = dynamic_cast<VideoTape *>(list)) {
+                printVideoTape(File, videoTape);
+            } else {
+                cout << "Type Error" << endl;
+            }
+            list = list->nextP;
+        }
+
+        File.close();
+    } else {
+        cout << "Fail save data";
+    }
+
+    return fileName;
+}
+
+void File::printPositionData(ofstream &File, Position *position) {
+    File << "  name: " << position->getName() << endl;
+    File << "  year: " << position->getYear() << endl;
+    File << "  type: " << position->getType() << endl;
+}
+
+void File::printSong(ofstream &File, Audio *audio) {
+    File << "  songs:" << endl;
+
+    for (auto song : audio->getSongs()) {
+        File << "    - title: " << song->getTitle() << endl;
+        File << "      length: " << song->getLength() << endl;
+        File << "      artist: " << endl;
+
+        for (auto artist : song->getArtists()) {
+            File << "        - name: " << artist->getName() << endl;
+            File << "          surname: " << artist->getSurname() << endl;
+            File << "          nickname: " << artist->getNickName() << endl;
+        }
+    }
+}
+
+void File::printCast(ofstream &File, Video *video) {
+    File << "  cast:" << endl;
+
+    for (auto actor : video->getCast()) {
+        File << "    - name: " << actor->getName() << endl;
+        File << "      surname: " << actor->getSurname() << endl;
+        File << "      nickname: " << actor->getRole() << endl;
+    }
+}
+
+void File::printAudioCd(ofstream &File, AudioCd *audioCd) {
+    File << "- class: AudioCd\n";
+    printPositionData(File, audioCd);
+    File << "  size: " << audioCd->getSize() << endl;
+
+    printSong(File, audioCd);
+}
+
+void File::printAudioTape(ofstream &File, AudioTape *audioTape) {
+    File << "- class: AudioTape\n";
+    printPositionData(File, audioTape);
+    File << "  length: " << audioTape->getLength() << endl;
+
+    printSong(File, audioTape);
+}
+
+void File::printVideoCd(ofstream &File, VideoCd *videoCd) {
+    File << "- class: VideoCd\n";
+    printPositionData(File, videoCd);
+    File << "  size: " << videoCd->getSize() << endl;
+    File << "  genre: " << videoCd->getGenre() << endl;
+
+    printCast(File, videoCd);
+}
+
+void File::printVideoTape(ofstream &File, VideoTape *videoTape) {
+    File << "- class: videoTape\n";
+    printPositionData(File, videoTape);
+    File << "  size: " << videoTape->getLength() << endl;
+    File << "  genre: " << videoTape->getGenre() << endl;
+
+    printCast(File, videoTape);
+}
+
+
