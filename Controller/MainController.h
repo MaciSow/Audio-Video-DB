@@ -22,6 +22,8 @@ private:
 
     void editElement(Position *&element);
 
+    Position * searchElementByName(Position* list, string name);
+
 public:
     MainController();
 
