@@ -1,3 +1,0 @@
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/rebuild_cache.dir
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/edit_cache.dir
-/mnt/d/Studies/PK/Projekt/Video-AudioDB/cmake-build-debug/CMakeFiles/Video_AudioDB.dir

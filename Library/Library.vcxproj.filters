@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Source Files\Controller">
+      <UniqueIdentifier>{737f3152-d9ac-41d6-8c1f-0bd13d2adaa4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\View">
+      <UniqueIdentifier>{01fb458a-692d-4e5c-9414-cd18034478e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\View\Elements">
+      <UniqueIdentifier>{e9f0a0b2-6cc5-4abb-93e6-214d52b05648}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\View\Pages">
+      <UniqueIdentifier>{f6679b2d-70ff-4408-b308-ff61a1c5001a}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="View\GraphicView.cpp">
+      <Filter>Source Files\View</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\CreatePage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\ExitPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\HomePage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\ListPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Elements\Button.cpp">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Elements\Input.cpp">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Elements\ListItem.cpp">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\Controller.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\SavePage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="View\GraphicView.h">
+      <Filter>Source Files\View</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\CreatePage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\ExitPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\HomePage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\ListPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\Page.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Elements\Button.h">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Elements\Input.h">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Elements\ListItem.h">
+      <Filter>Source Files\View\Elements</Filter>
+    </ClInclude>
+    <ClInclude Include="Controller\Controller.h">
+      <Filter>Source Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\SavePage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
