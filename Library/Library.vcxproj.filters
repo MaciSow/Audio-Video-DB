@@ -60,6 +60,12 @@
     <ClCompile Include="View\Pages\SavePage.cpp">
       <Filter>Source Files\View\Pages</Filter>
     </ClCompile>
+    <ClCompile Include="View\Pages\CreateSongPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\CreatePersonPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="View\GraphicView.h">
@@ -93,6 +99,12 @@
       <Filter>Source Files\Controller</Filter>
     </ClInclude>
     <ClInclude Include="View\Pages\SavePage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\CreateSongPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\CreatePersonPage.h">
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
   </ItemGroup>

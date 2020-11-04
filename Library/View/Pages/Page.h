@@ -5,6 +5,9 @@ enum Page {
     home,
     collection,
     create,
+    createSong,
+    createArtist,
+    createActor,
     save,
     exitView
 };

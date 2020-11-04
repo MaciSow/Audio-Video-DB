@@ -33,7 +33,6 @@ class SavePage {
     void textEntered(Event &event);
     bool isMouseOver();
     Page mouseClick();
-    void mouseRelease();
     void draw();
 };
 

@@ -2,6 +2,7 @@
 #ifndef LIBRARY_CONTROLLER_CONTROLLER_H
 #define LIBRARY_CONTROLLER_CONTROLLER_H
 #include "iostream"
+#include "vector"
 
 using namespace std;
 
@@ -13,7 +14,7 @@ class Controller {
     ~Controller();
 
     void log(string data);
-    void getData(string name, string surname);
+    void getData(vector<string> data);
 };
 
 #endif  //LIBRARY_CONTROLLER_CONTROLLER_H

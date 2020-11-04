@@ -34,7 +34,6 @@ class ListPage {
 
     bool isMouseOver();
     Page mouseClick();
-    void mouseRelease();
     void scroll(int offset);
     void draw();
 };

@@ -50,11 +50,6 @@ Page SavePage::mouseClick() {
     return save;
 }
 
-void SavePage::mouseRelease() {
-    btnSave->release(window);
-    btnCancel->release(window);
-}
-
 void SavePage::draw() {
     inputFileName->drawTo(window);
     btnSave->drawTo(window);
@@ -67,7 +62,7 @@ void SavePage::createElements() {
     float width = (float)(window->getSize().x);
     float posx = width / 2 - 125;
 
-    inputFileName = new Input({posx, 200}, font);
+    inputFileName = new Input({posx, 200}, font, "Filename:");
     inputFileName->setValue(defaultFileName);
 
     btnSave = new Button({(float)(width / 2 - 260), 300}, "SAVE", font);

@@ -40,9 +40,7 @@ Page ListPage::mouseClick() {
     return collection;
 }
 
-void ListPage::mouseRelease() {
-    btnBack->release(window);
-}
+
 
 void ListPage::scroll(int offset) {
     if (offset < -1) {

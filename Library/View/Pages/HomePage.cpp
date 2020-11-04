@@ -52,12 +52,6 @@ Page HomePage::mouseClick() {
     return home;
 }
 
-void HomePage::mouseRelease() {
-    btnList->release(window);
-    btnCreate->release(window);
-    btnSave->release(window);
-    btnExit->release(window);
-}
 
 void HomePage::draw() {
     btnList->drawTo(window);

@@ -8,6 +8,9 @@ GraphicView::GraphicView(Controller*& ctr) {
 	homePage = new HomePage(controller, window, font);
 	listPage = new ListPage(controller, window, font);
 	createPage = new CreatePage(controller, window, font);
+	createSongPage = new CreateSongPage(controller, window, font);
+	createArtistPage = new CreatePersonPage(controller, window, font, true);
+	createActorPage = new CreatePersonPage(controller, window, font, false);
 	savePage = new SavePage(controller, window, font);
 	exitPage = new ExitPage(controller, window, font);
 }
@@ -39,10 +42,6 @@ void GraphicView::start() {
 				mouseButtonPressedHandle(event);
 				break;
 
-			case Event::MouseButtonReleased:
-				mouseButtonReleasedHandle();
-				break;
-
 			case Event::MouseWheelMoved:
 				mouseWheelMovedHandle(event);
 				break;
@@ -59,7 +58,6 @@ void GraphicView::start() {
 		window->clear();
 		createBackground();
 		drawPage();
-		createTitle();
 		window->setMouseCursor(cursor);
 		window->display();
 	}
@@ -72,6 +70,18 @@ void GraphicView::textEnteredHandle(Event& event) {
 
 	case create:
 		createPage->textEntered(event);
+		break;
+
+	case createSong:
+		createSongPage->textEntered(event);
+		break;
+
+	case createArtist:
+		createArtistPage->textEntered(event);
+		break;
+
+	case createActor:
+		createActorPage->textEntered(event);
 		break;
 
 	case save:
@@ -101,6 +111,24 @@ void GraphicView::mouseMovedHandle() {
 
 	case create:
 		if (createPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;
+
+	case createSong:
+		if (createSongPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;
+
+	case createArtist:
+		if (createArtistPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;	
+	
+	case createActor:
+		if (createActorPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
@@ -142,8 +170,20 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 
 		case create:
 			page = createPage->mouseClick();
-			break;	
+			break;
+
+		case createSong:
+			page = createSongPage->mouseClick();
+			break;
+
+		case createArtist:
+			page = createArtistPage->mouseClick();
+			break;		
 		
+		case createActor:
+			page = createActorPage->mouseClick();
+			break;
+
 		case save:
 			page = savePage->mouseClick();
 			break;
@@ -156,33 +196,6 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 			break;
 		};
 	}
-}
-
-void GraphicView::mouseButtonReleasedHandle() {
-	switch (page) {
-	case home:
-		homePage->mouseRelease();
-		break;
-
-	case collection:
-		listPage->mouseRelease();
-		break;
-
-	case create:
-		createPage->mouseRelease();
-		break;	
-	
-	case save:
-		savePage->mouseRelease();
-		break;
-
-	case exitView:
-		exitPage->mouseRelease();
-		break;
-
-	default:
-		break;
-	};
 }
 
 void GraphicView::mouseWheelMovedHandle(Event& event) {
@@ -200,27 +213,48 @@ void GraphicView::mouseWheelMovedHandle(Event& event) {
 void GraphicView::drawPage() {
 	switch (page) {
 	case home:
-		title = "Media library";
+		createTitle("Media library");
 		homePage->draw();
 		break;
 
 	case collection:
-		title = "List";
+		createTitle("List");
 		listPage->draw();
 		break;
 
 	case create:
-		title = "Create element";
+		createTitle("Create element");
+		createFrame(width - 200, 410);
 		createPage->draw();
+		break;
+
+	case createSong:
+		createTitle("Create song");
+		createFrame(width - 200, 410);
+		createSongPage->draw();
+		break;
+
+	case createArtist:
+		createTitle("Create artist");
+		createFrame(width - 200, 410);
+		createArtistPage->draw();
 		break;	
 	
+	case createActor:
+		createTitle("Create actor");
+		createFrame(width - 200, 410);
+		createActorPage->draw();
+		break;
+
 	case save:
-		title = "Save file";
+		createTitle("Save file");
+		createFrame(width - 200, 300, height / 2 - 150);
 		savePage->draw();
 		break;
 
 	case exitView:
-		title = "Exit";
+		createTitle("Exit");
+		createFrame(width - 200, 300, height / 2 - 150);
 		exitPage->draw();
 		break;
 
@@ -232,14 +266,14 @@ void GraphicView::drawPage() {
 void GraphicView::createWindow() {
 	loadFont();
 
-	window = new RenderWindow(VideoMode(width, height), title, Style::Titlebar | Style::Close);
+	window = new RenderWindow(VideoMode(width, height), "Audio-Video Database", Style::Titlebar | Style::Close);
 
 	window->display();
 	View view(FloatRect(0, 0, float(width), float(height)));
 	window->setView(view);
 }
 
-void GraphicView::createTitle() {
+void GraphicView::createTitle(string title) {
 	Text text(title, font, 48);
 	text.setPosition(50, 16);
 
@@ -249,6 +283,15 @@ void GraphicView::createTitle() {
 
 	window->draw(text);
 	window->draw(line);
+}
+
+void GraphicView::createFrame(float width, float height, float offsetY) {
+	RectangleShape frame;
+	frame.setSize(Vector2f(width, height));
+	frame.move((this->width - width) / 2, offsetY);
+	frame.setFillColor({ 255, 255, 255, 120 });
+
+	window->draw(frame);
 }
 
 void GraphicView::createBackground() {

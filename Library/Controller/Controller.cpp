@@ -6,8 +6,12 @@ Controller::Controller(/* args */) {
 Controller::~Controller() {
 }
 
-void Controller::getData(string name, string surname) {
-    cout << "\nReceived data: \n\tName: " + name + "\n\tSurname: " + surname + "\n\n";
+void Controller::getData(vector<string> data) {
+    cout << "\nReceived data:\n";
+    
+    for (string item : data) {
+        cout << "\t" << item << endl;
+    }
 }
 
 void Controller::log(string data) {

@@ -10,7 +10,6 @@ ExitPage::ExitPage(Controller*& controller, RenderWindow*& window, Font& font) {
 ExitPage::~ExitPage() {
 }
 
-
 bool  ExitPage::isMouseOver() {
 	bool isCursorOver = false;
 	if (btnYes->isMouseOver(window)) {
@@ -36,11 +35,6 @@ Page  ExitPage::mouseClick() {
 	}
 
 	return exitView;
-}
-
-void  ExitPage::mouseRelease() {
-	btnYes->release(window);
-	btnNo->release(window);
 }
 
 void  ExitPage::draw() {

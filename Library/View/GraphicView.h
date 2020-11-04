@@ -1,4 +1,3 @@
-
 #ifndef LIBRARY_VIEW_GRAPHIC_VIEW_H
 #define LIBRARY_VIEW_GRAPHIC_VIEW_H
 
@@ -6,6 +5,8 @@
 #include "Elements/Button.h"
 #include "Elements/Input.h"
 #include "Pages/CreatePage.h"
+#include "Pages/CreateSongPage.h"
+#include "Pages/CreatePersonPage.h"
 #include "Pages/HomePage.h"
 #include "Pages/ListPage.h"
 #include "Pages/Page.h"
@@ -25,7 +26,6 @@ private:
 	RenderWindow* window;
 	Font font;
 	Cursor cursor;
-	string title = "Media library";
 	bool isUpdate = false;
 	int width = 960;
 	int height = 576;
@@ -34,6 +34,9 @@ private:
 	HomePage* homePage;
 	ListPage* listPage;
 	CreatePage* createPage;
+	CreateSongPage* createSongPage;
+	CreatePersonPage* createArtistPage;
+	CreatePersonPage* createActorPage;
 	SavePage* savePage;
 	ExitPage* exitPage;
 
@@ -47,7 +50,8 @@ private:
 
 	void loadFont();
 	void createWindow();
-	void createTitle();
+	void createTitle(string title);
+	void createFrame(float width, float height, float offsetY = 80);
 	void createBackground();
 
 public:

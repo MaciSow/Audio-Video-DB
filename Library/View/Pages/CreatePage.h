@@ -11,29 +11,42 @@ using namespace std;
 using namespace sf;
 
 class CreatePage {
-   private:
-    Controller *controller;
-    RenderWindow *window;
-    Font font;
+private:
+	Controller* controller;
+	RenderWindow* window;
+	Font font;
 
-    Input *inputName;
-    Input *inputSurname;
+	enum Carrier {
+		audio_cd,
+		audio_tape,
+		video_cd,
+		video_tape
+	};
 
-    Button *btnSave;
-    Button *btnCancel;
+	Carrier carrier;
 
-    void createElements();
-    void saveData();
+	vector< Input*> inputs;
+	vector<Button*> carrierChoice;
 
-   public:
-    CreatePage(Controller *&controller, RenderWindow *&window, Font &font);
-    ~CreatePage();
+	Button* btnAddSong;
+	Button* btnAddCast;
+	Button* btnSave;
+	Button* btnCancel;
 
-    void textEntered(Event &event);
-    bool isMouseOver();
-    Page mouseClick();
-    void mouseRelease();
-    void draw();
+
+	void createElements();
+	void saveData();
+	void checkCarrier();
+	void changeCarrier(Button*& button);
+
+public:
+	CreatePage(Controller*& controller, RenderWindow*& window, Font& font);
+	~CreatePage();
+
+	void textEntered(Event& event);
+	bool isMouseOver();
+	Page mouseClick();
+	void draw();
 };
 
 #endif  //LIBRARY_VIEW_CREATE_PAGE_H

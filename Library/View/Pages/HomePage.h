@@ -29,7 +29,6 @@ public:
 
     bool isMouseOver();
     Page mouseClick();
-    void mouseRelease();
     void draw();
 };
 
