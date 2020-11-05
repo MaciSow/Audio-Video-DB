@@ -30,11 +30,16 @@ public:
     Actor* selectedActor = nullptr;
     Song* selectedSong = nullptr;
 
+    vector<Song*> newSongs;
+    vector<Actor*> newActors;
+    vector<Artist*> newArtists;
+
     MainController();
-
     void home();
-
     Position * getList();
+    void setList(Position* list);
+
+    void addElement(Position*& element);
 
 };
 

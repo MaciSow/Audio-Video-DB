@@ -26,12 +26,15 @@ class ListPage {
     int length = 0;
     int limit = 5;
 
+    bool isOpen = false;
+
     void createElements();
     void drawList();
     void createSeparator(float positionY);
     void fillList(float listWidth, float itemHeight);
     string getType(Position *&position);
     void setSelectedElement(int index);
+    void refresh();
 
    public:
     ListPage(MainController*&controller, RenderWindow *&window, Font &font);
@@ -41,7 +44,7 @@ class ListPage {
     Page mouseClick();
     void scroll(int offset);
     void draw();
-    void refresh(); 
+  
 };
 
 #endif  //LIBRARY_VIEW_LIST_PAGE_H

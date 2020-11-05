@@ -46,7 +46,12 @@ Page CreatePersonPage::mouseClick() {
 		for (Input* input : inputs) {
 			input->clear();
 		}
+		if (isArtist)
+		{
+		return createSong;
+		}
 		return create;
+
 	}
 
 	if (btnCancel->isClick(window)) {
@@ -56,11 +61,18 @@ Page CreatePersonPage::mouseClick() {
 		return create;
 	}
 
-	return createSong;
+	if (isArtist) {
+		return createArtist;
+	}
+	else {
+		return createActor;
+	}
+
 }
 
 
 void CreatePersonPage::draw() {
+
 	for (Input* input : inputs) {
 		input->drawTo(window);
 	}
@@ -76,13 +88,13 @@ void CreatePersonPage::createElements() {
 	float center = width / 2;
 
 	inputs.push_back(new Input({ center - 290, 200 }, font, "Name:", 580, "name"));;
-	inputs.push_back(new Input({ center - 290, 270 }, font, "Surname:", 280, "surname"));;
+	inputs.push_back(new Input({ center - 290, 280 }, font, "Surname:", 580, "surname"));;
 	
 	if (isArtist) {
-		inputs.push_back(new Input({ center - 290, 340 }, font, "Nickname:", 580, "nickname"));;
+		inputs.push_back(new Input({ center - 290, 360 }, font, "Nickname:", 580, "nickname"));;
 	}
 	else {
-		inputs.push_back(new Input({ center - 290, 340 }, font, "Role:", 280, "role"));;
+		inputs.push_back(new Input({ center - 290, 360 }, font, "Role:", 580, "role"));;
 	}
 
 	btnSave = new Button({ (float)(center - 260), 500 }, "OK", font);
@@ -91,5 +103,18 @@ void CreatePersonPage::createElements() {
 }
 
 void CreatePersonPage::saveData() {
-	//controller->getData(inputName->getText(), inputYear->getText());
+	vector<string> data;
+
+	for (Input* input : inputs) {
+		data.push_back(input->getText());
+	}
+
+	if (isArtist)
+	{
+		controller->newArtists.push_back(new Artist(data[0], data[1], data[2]));
+	}
+	else {
+		controller->newActors.push_back(new Actor(data[0], data[1], data[2]));
+	}
+
 }

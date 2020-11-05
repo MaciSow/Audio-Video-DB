@@ -13,6 +13,8 @@ public:
     const vector<Song *> &getSongs() const;
 
     void setSongs(const vector<Song *> &songs);
+
+    void deleteSong(Song* &song);
 };
 
 #endif //VIDEO_AUDIODB_AUDIO_H

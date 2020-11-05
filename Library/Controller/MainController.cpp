@@ -1,29 +1,32 @@
 #include <iostream>
 #include "MainController.h"
 
-
 MainController::MainController() {
     list = nullptr;
-    //view = new ConsoleView();
 }
 
-
 void MainController::home() {
-
     File *f1 = new File();
 
     this->list = f1->readData("resources/Carrier.txt");
 //    this->list = f1->readData("../db.yaml");
 
-
     //view->showList(list);
 //    f1->saveData(this->list,"../Final.txt");
 }
 
-Position* MainController::getList()
-{
+Position* MainController::getList() {
     return this->list;
 }
+
+void MainController::setList(Position* list) {
+    this->list = list;
+}
+
+void MainController::addElement(Position*& element) {
+    element->addToList(list);
+}
+
 
 //void MainController::createElement(Type type) {
 //
@@ -65,7 +68,7 @@ Position* MainController::getList()
 //    songs.push_back(song);
 //
 //    if (type == AUDIO_CD) {
-//        Position *audioCd = new AudioCd(data[0], stoi(data[1]), data[2], songs, stof(data[3]));
+        //Position *audioCd = new AudioCd(data[0], stoi(data[1]), data[2], songs, stof(data[3]));
 //        return audioCd;
 //    }
 //    Position *audioTape = new AudioTape(data[0], stoi(data[1]), data[2], songs, stof(data[3]));

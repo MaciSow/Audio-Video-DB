@@ -19,6 +19,8 @@ public:
     const vector<Actor *> &getCast() const;
 
     void setCast(const vector<Actor *> &cast);
+
+    void deleteActor(Actor*& actor);
 };
 
 #endif //VIDEO_AUDIODB_VIDEO_H

@@ -85,7 +85,7 @@ void CreateSongPage::createElements() {
 	float center = width / 2;
 
 	inputs.push_back(new Input({ center - 290, 200 }, font, "Title:", 580, "title"));;
-	inputs.push_back(new Input({ center - 290, 340 }, font, "Length:", 280, "length"));;
+	inputs.push_back(new Input({ center - 290, 280 }, font, "Length:", 280, "length"));;
 
 	btnAddArtist = new Button({ (float)(center - 125), 420 }, "ADD ARTIST", font);
 	btnSave = new Button({ (float)(center - 260), 500 }, "OK", font);
@@ -94,15 +94,13 @@ void CreateSongPage::createElements() {
 }
 
 void CreateSongPage::saveData() {
-	
-		vector<string> data;
 
-		for (Input* input : inputs) {
-			data.push_back(input->getText());
-		}
+	vector<string> data;
 
+	for (Input* input : inputs) {
+		data.push_back(input->getText());
+	}
 
-		//controller->getData(data);
-	
-
+	controller->newSongs.push_back(new Song(data[0], controller->newArtists, stof(data[1])));
+	controller->newArtists.clear();
 }

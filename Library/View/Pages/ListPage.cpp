@@ -29,12 +29,14 @@ bool ListPage::isMouseOver() {
 Page ListPage::mouseClick() {
 	if (btnBack->isClick(window)) {
 		controller->selectedElement = nullptr;
+		isOpen = false;
 		return home;
 	}
 
 	for (auto item : items) {
 		if (item->isClick(window)) {
 			setSelectedElement(item->getId());
+			isOpen = false;
 			return details;
 		}
 	}
@@ -67,23 +69,16 @@ void ListPage::scroll(int offset) {
 }
 
 void ListPage::draw() {
-	//refresh();
+	if (!isOpen){
+		refresh();
+	}
+
 	window->draw(listFrame);
 	drawList();
 	btnBack->drawTo(window);
 }
 
-void ListPage::refresh()
-{
-	float listWidth = (float)(window->getSize().x) - 100;
-	float itemHeight = 60;
 
-	offset = 0;
-	length = 0;
-	limit = 5;
-	items.clear();
-	fillList(listWidth, itemHeight);
-}
 
 // private methods
 
@@ -100,7 +95,7 @@ void ListPage::createElements() {
 	listFrame.setOutlineThickness(1);
 	listFrame.setOutlineColor({ 0, 0, 0, 100 });
 	listFrame.setFillColor({ 255, 255, 255, 200 });
-	listFrame.move(50, 120);
+	listFrame.setPosition(50, 120);
 
 	btnBack = new Button({ centerX, height - 60 }, "BACK", font);
 	btnBack->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
@@ -180,4 +175,14 @@ void ListPage::setSelectedElement(int index)
 		counter++;
 		tmp = tmp->nextP;
 	}
+}
+
+void ListPage::refresh()
+{
+	offset = 0;
+	length = 0;
+	limit = 5;
+	isOpen = true;
+	items.clear();
+	createElements();
 }

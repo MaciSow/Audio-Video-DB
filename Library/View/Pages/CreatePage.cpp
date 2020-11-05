@@ -29,11 +29,7 @@ bool CreatePage::isMouseOver() {
 			else {
 				isCursorOver = true;
 			}
-
-		
 		}
-
-
 	}
 
 	for (Button* button : carrierChoice) {
@@ -76,7 +72,6 @@ Page CreatePage::mouseClick() {
 		}
 	}
 
-	
 	if (carrier<=1 && btnAddSong->isClick(window)) {
 		return createSong;
 	}
@@ -87,6 +82,7 @@ Page CreatePage::mouseClick() {
 	
 	if (btnSave->isClick(window)) {
 		saveData();
+		reset();
 		for (Input* input : inputs) {
 			input->clear();
 		}
@@ -94,7 +90,9 @@ Page CreatePage::mouseClick() {
 	}
 
 	if (btnCancel->isClick(window)) {
+		reset();
 		for (Input* input : inputs) {
+			
 			input->clear();
 		}
 		return home;
@@ -179,6 +177,7 @@ void CreatePage::createElements() {
 
 }
 
+
 void CreatePage::saveData() {
 	vector<string> data;
 
@@ -186,8 +185,37 @@ void CreatePage::saveData() {
 		data.push_back(input->getText());
 	}
 
+	Position* element;
+	//Position* element = controller->newElement;
+	cout << carrier;
+		switch (carrier)
+		{
+		case audio_cd:
+			element = new AudioCd(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[3]));
 
-	//controller->getData(data);
+			break;
+		case audio_tape:
+			element = new AudioTape(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[4]));
+			break;
+		case video_cd:
+			element = new VideoCd(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[3]));
+			break;
+		case video_tape:
+			element = new VideoTape(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[4]));
+
+			break;
+		default:
+			break;
+		}
+	
+	controller->addElement(element);
+}
+
+void CreatePage::reset()
+{
+	controller->newSongs.clear();
+	controller->newActors.clear();
+	controller->newArtists.clear();
 }
 
 void CreatePage::checkCarrier() {
@@ -223,3 +251,5 @@ void CreatePage::changeCarrier(Button*& button) {
 	}
 	button->setActive(true);
 }
+
+

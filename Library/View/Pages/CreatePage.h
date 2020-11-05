@@ -36,6 +36,7 @@ private:
 
 	void createElements();
 	void saveData();
+	void reset();
 	void checkCarrier();
 	void changeCarrier(Button*& button);
 

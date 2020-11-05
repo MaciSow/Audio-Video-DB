@@ -38,18 +38,22 @@ bool DetailsPage::isMouseOver() {
 Page DetailsPage::mouseClick() {
 	if (btnBack->isClick(window)) {
 		controller->selectedElement = nullptr;
+		isOpen = false;
 		return collection;
 	}
 
 	if (btnEdit->isClick(window)) {
+		isOpen = false;
 		return home;
 	}
 
 	if (btnDelete->isClick(window)) {
-		//Position* head = controller->getList();
-		//controller->selectedElement->deleteFromList(head);
-		//controller->selectedElement = nullptr;
+		Position *head = controller->getList();
+		controller->selectedElement->deleteFromList(head);
+		controller->setList(head);
 
+		controller->selectedElement = nullptr;
+		isOpen = false;
 		return collection;
 	}
 
@@ -62,6 +66,7 @@ Page DetailsPage::mouseClick() {
 			if (cast.size() > 0) {
 				controller->selectedActor = cast[item->getId() - 1];
 			}
+			isOpen = false;
 			return songActor;
 		}
 	}
@@ -93,8 +98,10 @@ void DetailsPage::scroll(int offset) {
 }
 
 void DetailsPage::draw() {
-	fillList();
-	//window->draw(listFrame);
+	if (!isOpen) {
+		refresh();
+	}
+
 	fillDetails();
 	drawList();
 	btnEdit->drawTo(window);
@@ -113,10 +120,11 @@ void DetailsPage::createElements() {
 	listFrame.setOutlineThickness(1);
 	listFrame.setOutlineColor({ 0, 0, 0, 100 });
 	listFrame.setFillColor({ 255, 255, 255, 200 });
-	listFrame.move(150, 260);
+	listFrame.setPosition(150, 260);
+
+	fillList();
 
 	btnEdit = new Button({ width - 260, 20 }, "EDIT", font, 100);
-
 
 	btnDelete = new Button({ width - 150, 20 }, "DELETE", font, 100);
 	btnDelete->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
@@ -153,11 +161,6 @@ void DetailsPage::fillList()
 {
 	float listWidth = (float)(window->getSize().x) - 300;
 	float itemHeight = 60;
-	limit = 5;
-	length = 0;
-	items.clear();
-	songs.clear();
-	cast.clear();
 
 	if (AudioCd* audioCd = dynamic_cast<AudioCd*>(controller->selectedElement)) {
 		songs = audioCd->getSongs();
@@ -172,12 +175,10 @@ void DetailsPage::fillList()
 		cast = videoTape->getCast();
 	}
 
-
-
 	if (songs.size() > 0)
 	{
 		for (Song* song : songs) {
-			items.push_back(new ListItem({ listWidth, itemHeight }, song->getTitle(), to_string(song->getLength()) + " s", font, length + 1));
+			items.push_back(new ListItem({ listWidth, itemHeight }, song->getTitle(), to_string((int)song->getLength()) + " s", font, length + 1));
 			length++;
 		}
 	}
@@ -273,4 +274,16 @@ string DetailsPage::getType(Position*& position)
 	else {
 		return "Unknown type";
 	}
+}
+
+void DetailsPage::refresh()
+{
+	offset = 0;
+	limit = 3;
+	length = 0;
+	items.clear();
+	songs.clear();
+	cast.clear();
+	isOpen = true;
+	createElements();
 }

@@ -26,6 +26,8 @@ class DetailsPage {
     vector<Song*> songs;
     vector<Actor*> cast;
 
+    bool isOpen = false;
+
     int offset = 0;
     int length = 0;
     int limit = 3;
@@ -35,7 +37,7 @@ class DetailsPage {
     void createSeparator(float positionY);
     void createElements();
     string getType(Position *&position);
-
+    void refresh();
 
    public:
     DetailsPage(MainController*&controller, RenderWindow *&window, Font &font);

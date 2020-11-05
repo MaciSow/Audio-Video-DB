@@ -41,7 +41,27 @@ Page SongActorPage::mouseClick() {
 	}
 
 	if (btnDelete->isClick(window)) {
-		return home;
+		if (controller->selectedSong)
+		{
+			if (AudioCd* audioCd = dynamic_cast<AudioCd*>(controller->selectedElement)) {
+				audioCd->deleteSong(controller->selectedSong);
+			}
+			else if (AudioTape* audioTape = dynamic_cast<AudioTape*>(controller->selectedElement)) {
+				audioTape->deleteSong(controller->selectedSong);
+			}
+			controller->selectedSong = nullptr;
+		}
+		if (controller->selectedActor) {
+			if (VideoCd* videoCd = dynamic_cast<VideoCd*>(controller->selectedElement)) {
+				videoCd->deleteActor(controller->selectedActor);
+			}
+			else if (VideoTape* videoTape = dynamic_cast<VideoTape*>(controller->selectedElement)) {
+				videoTape->deleteActor(controller->selectedActor);
+			}
+			controller->selectedActor = nullptr;
+		}
+
+		return details;
 	}
 
 	return songActor;
@@ -121,14 +141,14 @@ void SongActorPage::fillDetails() {
 	line1.setPosition({ posX,140 });
 	line2.setPosition({ posX,180 });
 	line3.setPosition({ posX,220 });
-	
+
 	line1.setFillColor(Color::Black);
 	line2.setFillColor(Color::Black);
 	line3.setFillColor(Color::Black);
 
 	if (controller->selectedSong) {
 		line1.setString("Title: " + controller->selectedSong->getTitle());
-		line2.setString("Length: " + to_string((int)controller->selectedSong->getLength())+ " s");
+		line2.setString("Length: " + to_string((int)controller->selectedSong->getLength()) + " s");
 		line3.setString("Artists:");
 	}
 	else {

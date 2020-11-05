@@ -18,3 +18,16 @@ const vector<Actor *> &Video::getCast() const {
 void Video::setCast(const vector<Actor *> &cast) {
     Video::cast = cast;
 }
+
+void Video::deleteActor(Actor*& actor)
+{
+	int counter = 0;
+
+	for (Actor* item : cast) {
+		if (item == actor) {
+			cast.erase(cast.begin() + counter);
+			return;
+		}
+		counter++;
+	}
+}
