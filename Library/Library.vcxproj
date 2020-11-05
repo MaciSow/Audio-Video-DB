@@ -150,7 +150,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="Controller\Controller.cpp" />
+    <ClCompile Include="Controller\MainController.cpp" />
     <ClCompile Include="main.cpp" />
+    <ClCompile Include="Model\Audio\Audio.cpp" />
+    <ClCompile Include="Model\Audio\AudioCd.cpp" />
+    <ClCompile Include="Model\Audio\AudioTape.cpp" />
+    <ClCompile Include="Model\Others\Actor.cpp" />
+    <ClCompile Include="Model\Others\Artist.cpp" />
+    <ClCompile Include="Model\Others\File.cpp" />
+    <ClCompile Include="Model\Others\Person.cpp" />
+    <ClCompile Include="Model\Others\Song.cpp" />
+    <ClCompile Include="Model\Position.cpp" />
+    <ClCompile Include="Model\Video\Video.cpp" />
+    <ClCompile Include="Model\Video\VideoCd.cpp" />
+    <ClCompile Include="Model\Video\VideoTape.cpp" />
     <ClCompile Include="View\Elements\Button.cpp" />
     <ClCompile Include="View\Elements\Input.cpp" />
     <ClCompile Include="View\Elements\ListItem.cpp" />
@@ -158,13 +171,28 @@
     <ClCompile Include="View\Pages\CreatePage.cpp" />
     <ClCompile Include="View\Pages\CreatePersonPage.cpp" />
     <ClCompile Include="View\Pages\CreateSongPage.cpp" />
+    <ClCompile Include="View\Pages\DetailsPage.cpp" />
     <ClCompile Include="View\Pages\ExitPage.cpp" />
     <ClCompile Include="View\Pages\HomePage.cpp" />
     <ClCompile Include="View\Pages\ListPage.cpp" />
     <ClCompile Include="View\Pages\SavePage.cpp" />
+    <ClCompile Include="View\Pages\SongActorPage.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller\Controller.h" />
+    <ClInclude Include="Controller\MainController.h" />
+    <ClInclude Include="Model\Audio\Audio.h" />
+    <ClInclude Include="Model\Audio\AudioCd.h" />
+    <ClInclude Include="Model\Audio\AudioTape.h" />
+    <ClInclude Include="Model\Others\Actor.h" />
+    <ClInclude Include="Model\Others\Artist.h" />
+    <ClInclude Include="Model\Others\File.h" />
+    <ClInclude Include="Model\Others\Person.h" />
+    <ClInclude Include="Model\Others\Song.h" />
+    <ClInclude Include="Model\Position.h" />
+    <ClInclude Include="Model\Video\Video.h" />
+    <ClInclude Include="Model\Video\VideoCd.h" />
+    <ClInclude Include="Model\Video\VideoTape.h" />
     <ClInclude Include="View\Elements\Button.h" />
     <ClInclude Include="View\Elements\Input.h" />
     <ClInclude Include="View\Elements\ListItem.h" />
@@ -172,11 +200,25 @@
     <ClInclude Include="View\Pages\CreatePage.h" />
     <ClInclude Include="View\Pages\CreatePersonPage.h" />
     <ClInclude Include="View\Pages\CreateSongPage.h" />
+    <ClInclude Include="View\Pages\DetailsPage.h" />
     <ClInclude Include="View\Pages\ExitPage.h" />
     <ClInclude Include="View\Pages\HomePage.h" />
     <ClInclude Include="View\Pages\ListPage.h" />
     <ClInclude Include="View\Pages\Page.h" />
     <ClInclude Include="View\Pages\SavePage.h" />
+    <ClInclude Include="View\Pages\SongActorPage.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\bgr.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\font.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\Carrier.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\db.yaml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

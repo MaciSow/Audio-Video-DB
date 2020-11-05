@@ -3,7 +3,7 @@
 
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
-#include "../../Controller/Controller.h"
+#include "../../Controller/MainController.h"
 #include "Page.h"
 #include "iostream"
 
@@ -11,7 +11,7 @@ using namespace std;
 using namespace sf;
 
 class CreatePersonPage{
-	Controller* controller;
+	MainController* controller;
 	RenderWindow* window;
 	Font font;
 	
@@ -26,7 +26,7 @@ class CreatePersonPage{
 	void saveData();
 
 public:
-	CreatePersonPage(Controller*& controller, RenderWindow*& window, Font& font, bool isArtist);
+	CreatePersonPage(MainController*& controller, RenderWindow*& window, Font& font, bool isArtist);
 	~CreatePersonPage();
 
 	void textEntered(Event& event);

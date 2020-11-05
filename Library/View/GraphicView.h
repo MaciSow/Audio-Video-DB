@@ -1,7 +1,7 @@
 #ifndef LIBRARY_VIEW_GRAPHIC_VIEW_H
 #define LIBRARY_VIEW_GRAPHIC_VIEW_H
 
-#include "../Controller/Controller.h"
+#include "../Controller/MainController.h"
 #include "Elements/Button.h"
 #include "Elements/Input.h"
 #include "Pages/CreatePage.h"
@@ -9,6 +9,8 @@
 #include "Pages/CreatePersonPage.h"
 #include "Pages/HomePage.h"
 #include "Pages/ListPage.h"
+#include "Pages/DetailsPage.h"
+#include "Pages/SongActorPage.h"
 #include "Pages/Page.h"
 #include "Pages/SavePage.h"
 #include "Pages/ExitPage.h"
@@ -21,7 +23,7 @@ using namespace sf;
 
 class GraphicView {
 private:
-	Controller* controller;
+	MainController* controller;
 	string resourcePath = "resources/";
 	RenderWindow* window;
 	Font font;
@@ -33,13 +35,14 @@ private:
 
 	HomePage* homePage;
 	ListPage* listPage;
+	DetailsPage* detailsPage;
+	SongActorPage* songActorPage;
 	CreatePage* createPage;
 	CreateSongPage* createSongPage;
 	CreatePersonPage* createArtistPage;
 	CreatePersonPage* createActorPage;
 	SavePage* savePage;
 	ExitPage* exitPage;
-
 
 	void textEnteredHandle(Event& event);
 	void mouseMovedHandle();
@@ -55,7 +58,10 @@ private:
 	void createBackground();
 
 public:
-	GraphicView(Controller*& ctr);
+
+
+
+	GraphicView(MainController*& ctr);
 	~GraphicView();
 
 	void start();

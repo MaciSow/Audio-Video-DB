@@ -3,7 +3,7 @@
 
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
-#include "../../Controller/Controller.h"
+#include "../../Controller/MainController.h"
 #include "Page.h"
 #include "iostream"
 
@@ -12,7 +12,7 @@ using namespace sf;
 
 class CreatePage {
 private:
-	Controller* controller;
+	MainController* controller;
 	RenderWindow* window;
 	Font font;
 
@@ -40,7 +40,7 @@ private:
 	void changeCarrier(Button*& button);
 
 public:
-	CreatePage(Controller*& controller, RenderWindow*& window, Font& font);
+	CreatePage(MainController*& controller, RenderWindow*& window, Font& font);
 	~CreatePage();
 
 	void textEntered(Event& event);

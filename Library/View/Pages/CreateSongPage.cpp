@@ -1,5 +1,5 @@
 #include "CreateSongPage.h"
-CreateSongPage::CreateSongPage(Controller*& controller, RenderWindow*& window, Font& font) {
+CreateSongPage::CreateSongPage(MainController*& controller, RenderWindow*& window, Font& font) {
 	this->controller = controller;
 	this->window = window;
 	this->font = font;
@@ -102,7 +102,7 @@ void CreateSongPage::saveData() {
 		}
 
 
-		controller->getData(data);
+		//controller->getData(data);
 	
 
 }

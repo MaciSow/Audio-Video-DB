@@ -1,12 +1,14 @@
 #include "GraphicView.h"
 
-GraphicView::GraphicView(Controller*& ctr) {
+GraphicView::GraphicView(MainController*& ctr) {
 	this->controller = ctr;
 
 	createWindow();
 	page = home;
 	homePage = new HomePage(controller, window, font);
 	listPage = new ListPage(controller, window, font);
+	detailsPage = new DetailsPage(controller, window, font);
+	songActorPage = new SongActorPage(controller, window, font);
 	createPage = new CreatePage(controller, window, font);
 	createSongPage = new CreateSongPage(controller, window, font);
 	createArtistPage = new CreatePersonPage(controller, window, font, true);
@@ -54,6 +56,7 @@ void GraphicView::start() {
 				break;
 			}
 		}
+
 
 		window->clear();
 		createBackground();
@@ -105,6 +108,18 @@ void GraphicView::mouseMovedHandle() {
 
 	case collection:
 		if (listPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;	
+	
+	case details:
+		if (detailsPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;
+
+	case songActor:
+		if (songActorPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
@@ -166,6 +181,14 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 
 		case collection:
 			page = listPage->mouseClick();
+			break;		
+		
+		case details:
+			page = detailsPage->mouseClick();
+			break;
+					
+		case songActor:
+			page = songActorPage->mouseClick();
 			break;
 
 		case create:
@@ -202,6 +225,10 @@ void GraphicView::mouseWheelMovedHandle(Event& event) {
 	switch (page) {
 	case collection:
 		listPage->scroll(event.mouseWheel.delta);
+		break;	
+
+	case details:
+		detailsPage->scroll(event.mouseWheel.delta);
 		break;
 
 	default:
@@ -220,6 +247,18 @@ void GraphicView::drawPage() {
 	case collection:
 		createTitle("List");
 		listPage->draw();
+		break;	
+	
+	case details:
+		createTitle("Details: " + controller->selectedElement->getName());
+		createFrame(width - 200, 340, 120);
+		detailsPage->draw();
+		break;	
+	
+	case songActor:
+		createTitle("Details");
+		createFrame(width - 200, 340, 120);
+		songActorPage->draw();
 		break;
 
 	case create:
@@ -289,7 +328,7 @@ void GraphicView::createFrame(float width, float height, float offsetY) {
 	RectangleShape frame;
 	frame.setSize(Vector2f(width, height));
 	frame.move((this->width - width) / 2, offsetY);
-	frame.setFillColor({ 255, 255, 255, 120 });
+	frame.setFillColor({ 255, 255, 255, 160 });
 
 	window->draw(frame);
 }

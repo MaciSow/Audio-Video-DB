@@ -1,6 +1,6 @@
 #include "SavePage.h"
 
-SavePage::SavePage(Controller *&controller, RenderWindow *&window, Font &font) {
+SavePage::SavePage(MainController*&controller, RenderWindow *&window, Font &font) {
     this->controller = controller;
     this->window = window;
     this->font = font;
@@ -71,11 +71,11 @@ void SavePage::createElements() {
 }
 
 void SavePage::saveData() {
-    if (inputFileName->getText() == defaultFileName) {
-    controller->log("same file");
-    return;
-    }
+    //if (inputFileName->getText() == defaultFileName) {
+    //controller->log("same file");
+    //return;
+    //}
 
-    controller->log(inputFileName->getText());
-    return;
+    //controller->log(inputFileName->getText());
+    //return;
 }

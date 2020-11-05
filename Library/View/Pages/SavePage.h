@@ -3,7 +3,7 @@
 
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
-#include "../../Controller/Controller.h"
+#include "../../Controller/MainController.h"
 #include "Page.h"
 #include "iostream"
 
@@ -12,7 +12,7 @@ using namespace sf;
 
 class SavePage {
    private:
-    Controller *controller;
+       MainController*controller;
     RenderWindow *window;
     Font font;
 
@@ -27,7 +27,7 @@ class SavePage {
     void saveData();
 
    public:
-    SavePage(Controller *&controller, RenderWindow *&window, Font &font);
+    SavePage(MainController*&controller, RenderWindow *&window, Font &font);
     ~SavePage();
 
     void textEntered(Event &event);

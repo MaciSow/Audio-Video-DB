@@ -4,6 +4,8 @@
 enum Page {
     home,
     collection,
+    details,
+    songActor,
     create,
     createSong,
     createArtist,

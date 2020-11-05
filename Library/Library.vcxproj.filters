@@ -25,6 +25,18 @@
     <Filter Include="Source Files\View\Pages">
       <UniqueIdentifier>{f6679b2d-70ff-4408-b308-ff61a1c5001a}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Source Files\Model">
+      <UniqueIdentifier>{06f8faab-7af1-4cb5-9205-cd432e80aff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\Audio">
+      <UniqueIdentifier>{a33c58c6-c6e0-4ed5-9f91-c655c8319d7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\Video">
+      <UniqueIdentifier>{2341a6c0-1829-4820-831e-f9a2901c606f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\Model\Others">
+      <UniqueIdentifier>{323dfbcb-b325-4ef6-a72d-f8c011062c9d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -64,6 +76,51 @@
       <Filter>Source Files\View\Pages</Filter>
     </ClCompile>
     <ClCompile Include="View\Pages\CreatePersonPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="Controller\MainController.cpp">
+      <Filter>Source Files\Controller</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Position.cpp">
+      <Filter>Source Files\Model</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Audio\AudioCd.cpp">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Audio\AudioTape.cpp">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Audio\Audio.cpp">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Others\File.cpp">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Others\Person.cpp">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Others\Song.cpp">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Others\Actor.cpp">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Others\Artist.cpp">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Video\VideoTape.cpp">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Video\Video.cpp">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="Model\Video\VideoCd.cpp">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\DetailsPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
+    <ClCompile Include="View\Pages\SongActorPage.cpp">
       <Filter>Source Files\View\Pages</Filter>
     </ClCompile>
   </ItemGroup>
@@ -107,5 +164,70 @@
     <ClInclude Include="View\Pages\CreatePersonPage.h">
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
+    <ClInclude Include="Controller\MainController.h">
+      <Filter>Source Files\Controller</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Position.h">
+      <Filter>Source Files\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Audio\AudioCd.h">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Audio\AudioTape.h">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Audio\Audio.h">
+      <Filter>Source Files\Model\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Others\Artist.h">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Others\File.h">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Others\Person.h">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Others\Song.h">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Others\Actor.h">
+      <Filter>Source Files\Model\Others</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Video\VideoCd.h">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Video\VideoTape.h">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="Model\Video\Video.h">
+      <Filter>Source Files\Model\Video</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\DetailsPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\SongActorPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\bgr.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\font.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="resources\Carrier.txt">
+      <Filter>Resource Files</Filter>
+    </Text>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="resources\db.yaml">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>

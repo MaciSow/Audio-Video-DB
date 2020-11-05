@@ -1,6 +1,6 @@
 #include "HomePage.h"
 
-HomePage::HomePage(Controller*& controller, RenderWindow*& window, Font& font) {
+HomePage::HomePage(MainController*& controller, RenderWindow*& window, Font& font) {
     this->controller = controller;
     this->window = window;
     this->font = font;

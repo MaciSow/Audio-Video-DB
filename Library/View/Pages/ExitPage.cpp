@@ -1,6 +1,6 @@
 #include "ExitPage.h"
 
-ExitPage::ExitPage(Controller*& controller, RenderWindow*& window, Font& font) {
+ExitPage::ExitPage(MainController*& controller, RenderWindow*& window, Font& font) {
 	this->controller = controller;
 	this->window = window;
 	this->font = font;

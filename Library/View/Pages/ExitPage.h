@@ -3,7 +3,7 @@
 
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
-#include "../../Controller/Controller.h"
+#include "../../Controller/MainController.h"
 #include "Page.h"
 #include "iostream"
 
@@ -12,7 +12,7 @@ using namespace sf;
 
 class  ExitPage {
    private:
-    Controller *controller;
+    MainController*controller;
     RenderWindow *window;
     Font font;
 
@@ -24,7 +24,7 @@ class  ExitPage {
     void saveData();
 
    public:
-     ExitPage(Controller *&controller, RenderWindow *&window, Font &font);
+     ExitPage(MainController*&controller, RenderWindow *&window, Font &font);
     ~ ExitPage();
 
 

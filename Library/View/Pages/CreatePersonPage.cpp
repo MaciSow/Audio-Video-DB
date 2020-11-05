@@ -1,5 +1,5 @@
 #include "CreatePersonPage.h"
-CreatePersonPage::CreatePersonPage(Controller*& controller, RenderWindow*& window, Font& font, bool isArtist) {
+CreatePersonPage::CreatePersonPage(MainController*& controller, RenderWindow*& window, Font& font, bool isArtist) {
 	this->controller = controller;
 	this->window = window;
 	this->font = font;

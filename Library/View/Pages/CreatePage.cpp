@@ -1,6 +1,6 @@
 #include "CreatePage.h"
 
-CreatePage::CreatePage(Controller*& controller, RenderWindow*& window, Font& font) {
+CreatePage::CreatePage(MainController*& controller, RenderWindow*& window, Font& font) {
 	this->controller = controller;
 	this->window = window;
 	this->font = font;
@@ -187,7 +187,7 @@ void CreatePage::saveData() {
 	}
 
 
-	controller->getData(data);
+	//controller->getData(data);
 }
 
 void CreatePage::checkCarrier() {
