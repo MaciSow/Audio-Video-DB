@@ -123,6 +123,9 @@
     <ClCompile Include="View\Pages\SongActorPage.cpp">
       <Filter>Source Files\View\Pages</Filter>
     </ClCompile>
+    <ClCompile Include="View\Pages\EditPage.cpp">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="View\GraphicView.h">
@@ -207,6 +210,9 @@
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
     <ClInclude Include="View\Pages\SongActorPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\EditPage.h">
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
   </ItemGroup>

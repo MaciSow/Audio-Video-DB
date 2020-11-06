@@ -25,7 +25,7 @@ bool CreatePersonPage::isMouseOver() {
 		}
 	}
 
-	if (btnSave->isMouseOver(window)) {
+	if (btnSave->isMouseOver(window) && isValid()) {
 		isCursorOver = true;
 	}
 
@@ -41,24 +41,34 @@ Page CreatePersonPage::mouseClick() {
 		input->checkSelection(window);
 	}
 
-	if (btnSave->isClick(window)) {
+	if (btnSave->isClick(window) && isValid()) {
 		saveData();
-		for (Input* input : inputs) {
-			input->clear();
+		clear();
+
+		if (isArtist) {
+			return createSong;
 		}
-		if (isArtist)
-		{
-		return createSong;
+
+		if (controller->selectedActor != nullptr) {
+			return songActor;
 		}
-		return create;
+
+		return controller->isCreating ? create : details;
 
 	}
 
 	if (btnCancel->isClick(window)) {
-		for (Input* input : inputs) {
-			input->clear();
+		clear();
+
+		if (isArtist) {
+			return createSong;
 		}
-		return create;
+
+		if (controller->selectedActor != nullptr) {
+			return songActor;
+		}
+
+		return controller->isCreating ? create : details;
 	}
 
 	if (isArtist) {
@@ -67,17 +77,24 @@ Page CreatePersonPage::mouseClick() {
 	else {
 		return createActor;
 	}
-
 }
 
 
 void CreatePersonPage::draw() {
 
+	if (!isOpen && controller->selectedActor != nullptr) {
+		fillInputs();
+		isOpen = true;
+	}
+
 	for (Input* input : inputs) {
 		input->drawTo(window);
 	}
 
-	btnSave->drawTo(window);
+	if (isValid()) {
+		btnSave->drawTo(window);
+	}
+
 	btnCancel->drawTo(window);
 }
 
@@ -89,12 +106,12 @@ void CreatePersonPage::createElements() {
 
 	inputs.push_back(new Input({ center - 290, 200 }, font, "Name:", 580, "name"));;
 	inputs.push_back(new Input({ center - 290, 280 }, font, "Surname:", 580, "surname"));;
-	
+
 	if (isArtist) {
-		inputs.push_back(new Input({ center - 290, 360 }, font, "Nickname:", 580, "nickname"));;
+		inputs.push_back(new Input({ center - 290, 350 }, font, "Nickname:", 580, "nickname"));;
 	}
 	else {
-		inputs.push_back(new Input({ center - 290, 360 }, font, "Role:", 580, "role"));;
+		inputs.push_back(new Input({ center - 290, 350 }, font, "Role:", 580, "role"));;
 	}
 
 	btnSave = new Button({ (float)(center - 260), 500 }, "OK", font);
@@ -102,19 +119,51 @@ void CreatePersonPage::createElements() {
 	btnCancel->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
 }
 
+void CreatePersonPage::fillInputs() {
+	Actor* actor = controller->selectedActor;
+	inputs[0]->setValue(actor->getName());
+	inputs[1]->setValue(actor->getSurname());
+	inputs[2]->setValue(actor->getRole());
+}
+
 void CreatePersonPage::saveData() {
+
 	vector<string> data;
+	Position* element = controller->selectedElement;
 
 	for (Input* input : inputs) {
 		data.push_back(input->getText());
 	}
 
-	if (isArtist)
-	{
-		controller->newArtists.push_back(new Artist(data[0], data[1], data[2]));
-	}
-	else {
-		controller->newActors.push_back(new Actor(data[0], data[1], data[2]));
+	if (controller->selectedActor != nullptr) {
+		controller->updatePerson(data);
+		return;
 	}
 
+	if (isArtist) {
+		controller->addArtist(new Artist(data[0], data[1], data[2]));
+	}
+	else {
+		controller->addActor(new Actor(data[0], data[1], data[2]));
+	}
+}
+
+void CreatePersonPage::clear() {
+	isOpen = false;
+	for (Input* input : inputs) {
+		input->clear();
+	}
+}
+
+bool CreatePersonPage::isValid()
+{
+	bool isValid = true;
+
+	for (Input* input : inputs) {
+		if (!input->validate()) {
+			isValid = false;
+		}
+	}
+
+	return isValid;
 }

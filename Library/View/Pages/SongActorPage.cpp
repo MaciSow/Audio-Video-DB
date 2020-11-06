@@ -37,7 +37,13 @@ Page SongActorPage::mouseClick() {
 	}
 
 	if (btnEdit->isClick(window)) {
-		return home;
+		if (controller->selectedSong) {
+			return createSong;
+		}
+
+		if (controller->selectedActor) {
+			return createActor;
+		}
 	}
 
 	if (btnDelete->isClick(window)) {
@@ -49,7 +55,6 @@ Page SongActorPage::mouseClick() {
 			else if (AudioTape* audioTape = dynamic_cast<AudioTape*>(controller->selectedElement)) {
 				audioTape->deleteSong(controller->selectedSong);
 			}
-			controller->selectedSong = nullptr;
 		}
 		if (controller->selectedActor) {
 			if (VideoCd* videoCd = dynamic_cast<VideoCd*>(controller->selectedElement)) {
@@ -58,22 +63,21 @@ Page SongActorPage::mouseClick() {
 			else if (VideoTape* videoTape = dynamic_cast<VideoTape*>(controller->selectedElement)) {
 				videoTape->deleteActor(controller->selectedActor);
 			}
-			controller->selectedActor = nullptr;
 		}
 
+		controller->selectedSong = nullptr;
+		controller->selectedActor = nullptr;
 		return details;
 	}
 
 	return songActor;
 }
 
-
-
 void SongActorPage::draw() {
-	if (controller->selectedSong)
-	{
+	if (controller->selectedSong) {
 		drawList();
 	}
+
 	fillDetails();
 	btnEdit->drawTo(window);
 	btnDelete->drawTo(window);

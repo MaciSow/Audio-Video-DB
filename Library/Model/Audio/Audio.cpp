@@ -11,6 +11,10 @@ void Audio::setSongs(const vector<Song*>& songs) {
 	Audio::songs = songs;
 }
 
+void Audio::addSong(Song *&song) {
+	songs.push_back(song);
+}
+
 void Audio::deleteSong(Song*& song) {
 	int counter = 0;
 

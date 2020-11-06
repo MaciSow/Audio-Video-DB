@@ -22,6 +22,14 @@ bool DetailsPage::isMouseOver() {
 		isCursorOver = true;
 	}
 
+	if (btnAddSong->isMouseOver(window)) {
+		isCursorOver = true;
+	}
+
+	if (btnAddActor->isMouseOver(window)) {
+		isCursorOver = true;
+	}
+
 	if (btnBack->isMouseOver(window)) {
 		isCursorOver = true;
 	}
@@ -44,17 +52,32 @@ Page DetailsPage::mouseClick() {
 
 	if (btnEdit->isClick(window)) {
 		isOpen = false;
-		return home;
+		return edit;
 	}
 
 	if (btnDelete->isClick(window)) {
-		Position *head = controller->getList();
+		Position* head = controller->getList();
 		controller->selectedElement->deleteFromList(head);
 		controller->setList(head);
 
 		controller->selectedElement = nullptr;
 		isOpen = false;
 		return collection;
+	}
+
+
+	if (isVideo()) {
+		if (btnAddActor->isClick(window)) {
+			isOpen = false;
+			return createActor;
+		}
+	}
+	else {
+		if (btnAddSong->isClick(window)) {
+
+			isOpen = false;
+			return createSong;
+		}
 	}
 
 	for (auto item : items) {
@@ -98,6 +121,7 @@ void DetailsPage::scroll(int offset) {
 }
 
 void DetailsPage::draw() {
+
 	if (!isOpen) {
 		refresh();
 	}
@@ -106,6 +130,14 @@ void DetailsPage::draw() {
 	drawList();
 	btnEdit->drawTo(window);
 	btnDelete->drawTo(window);
+
+	if (isVideo()) {
+		btnAddActor->drawTo(window);
+	}
+	else {
+		btnAddSong->drawTo(window);
+	}
+
 	btnBack->drawTo(window);
 }
 
@@ -128,6 +160,9 @@ void DetailsPage::createElements() {
 
 	btnDelete = new Button({ width - 150, 20 }, "DELETE", font, 100);
 	btnDelete->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
+
+	btnAddSong = new Button({ width - 240, 210 }, "ADD SONG", font, 120);
+	btnAddActor = new Button({ width - 240, 210 }, "ADD ACTOR", font, 120);
 
 	btnBack = new Button({ centerX, height - 60 }, "BACK", font);
 	btnBack->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
@@ -274,6 +309,17 @@ string DetailsPage::getType(Position*& position)
 	else {
 		return "Unknown type";
 	}
+}
+
+bool DetailsPage::isVideo()
+{
+	string type = getType(controller->selectedElement);
+
+	if (type == "Audio CD" || type == "Audio Tape") {
+		return false;
+	}
+
+	return true;
 }
 
 void DetailsPage::refresh()

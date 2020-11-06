@@ -25,6 +25,7 @@ private:
 	float height = 40;
 	int limit = (int)floor((width-20)/10);
 	int fontSize = 16;
+	bool isNumber = false;
 
 	enum State {
 		inactive,
@@ -36,11 +37,14 @@ private:
 	void setInputState(State state);
 	void inputLogic(int charTyped);
 	void deleteLastChar();
+	void addSlash();
+
 
 public:
 	Input(Vector2f position, Font& font ,string label = "", float width = 250, string id = "" );
 	~Input();
 
+	void setIsNumber();
 	void setValue(string value);
 	void setWidth(float width);
 	void setLimit(int limit);
@@ -51,6 +55,7 @@ public:
 	void typeOn(Event input);
 	void drawTo(RenderWindow*& window);
 	void clear();
+	bool validate();
 	string getText();
 };
 

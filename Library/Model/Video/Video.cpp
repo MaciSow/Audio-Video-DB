@@ -19,6 +19,10 @@ void Video::setCast(const vector<Actor *> &cast) {
     Video::cast = cast;
 }
 
+void Video::addActor(Actor*& actor) {
+	cast.push_back(actor);
+}
+
 void Video::deleteActor(Actor*& actor)
 {
 	int counter = 0;

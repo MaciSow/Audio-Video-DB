@@ -25,6 +25,8 @@ public:
 
     void setArtists(const vector<Artist*> & artists);
 
+    void addArtist(Artist *& artist);
+
     float getLength() const;
 
     void setLength(float length);

@@ -19,8 +19,10 @@ class DetailsPage {
 
     RectangleShape listFrame;
     vector<ListItem *> items;
-    Button *btnEdit;
+    Button* btnEdit;
     Button *btnDelete;
+    Button *btnAddSong;
+    Button* btnAddActor;
     Button *btnBack;
     
     vector<Song*> songs;
@@ -37,6 +39,7 @@ class DetailsPage {
     void createSeparator(float positionY);
     void createElements();
     string getType(Position *&position);
+    bool isVideo();
     void refresh();
 
    public:

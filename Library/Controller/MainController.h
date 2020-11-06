@@ -11,36 +11,43 @@ using namespace std;
 
 class MainController {
 private:
-    Position *list;
+	Position* list;
 
-    //ConsoleView *view;
+	//ConsoleView *view;
 
-    /*void createElement(Type type);
+	/*void createElement(Type type);
 
-    Position *createAudio(Type type);
+	Position *createAudio(Type type);
 
-    Position *createVideo(Type type);
+	Position *createVideo(Type type);
 
-    void editElement(Position *&element);*/
+	void editElement(Position *&element);*/
 
-    Position * searchElementByName(Position* list, string name);
+	Position* searchElementByName(Position* list, string name);
 
 public:
-    Position* selectedElement = nullptr;
-    Actor* selectedActor = nullptr;
-    Song* selectedSong = nullptr;
+	Position* selectedElement = nullptr;
+	Actor* selectedActor = nullptr;
+	Song* selectedSong = nullptr;
 
-    vector<Song*> newSongs;
-    vector<Actor*> newActors;
-    vector<Artist*> newArtists;
+	vector<Song*> newSongs;
+	vector<Actor*> newActors;
+	vector<Artist*> newArtists;
 
-    MainController();
-    void home();
-    Position * getList();
-    void setList(Position* list);
+	bool isCreating = false;
 
-    void addElement(Position*& element);
+	MainController();
+	void home();
+	Position* getList();
+	void setList(Position* list);
 
+	void addElement(Position*& element);
+	void addArtist(Artist* artist);
+	void addActor(Actor* actor);
+	void addSong(Song* song);
+	void updateElement(vector<string> data);
+	void updatePerson(vector<string> data);
+	void updateSong(vector<string> data);
 };
 
 #endif //VIDEO_AUDIODB_MAINCONTROLLER_H

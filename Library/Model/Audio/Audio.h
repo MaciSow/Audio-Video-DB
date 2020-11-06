@@ -14,6 +14,8 @@ public:
 
     void setSongs(const vector<Song *> &songs);
 
+    void addSong(Song *&song);
+
     void deleteSong(Song* &song);
 };
 

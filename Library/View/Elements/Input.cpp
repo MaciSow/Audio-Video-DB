@@ -10,6 +10,10 @@ Input::Input(Vector2f position, Font& font, string label, float width, string id
 Input::~Input() {
 }
 
+void Input::setIsNumber() {
+	isNumber = true;
+}
+
 void Input::setValue(string value)
 {
 	string newT = "";
@@ -21,6 +25,7 @@ void Input::setValue(string value)
 	text << newT;
 	input.setString(newT);
 }
+
 
 void Input::setWidth(float width)
 {
@@ -151,6 +156,7 @@ void Input::create(Vector2f position, Font& font, string label) {
 }
 
 void Input::setInputState(State state) {
+
 	switch (state) {
 	case inactive:
 		frame.setFillColor({ 255, 255, 255, 150 });
@@ -161,10 +167,13 @@ void Input::setInputState(State state) {
 		frame.setFillColor({ 255, 255, 255, 200 });
 		break;
 	case active:
+		addSlash();
+		
 		frame.setFillColor({ 255, 255, 255, 250 });
 		frame.setOutlineColor({ 0, 0, 0, 250 });
-		break;
 
+		break;
+	
 	default:
 		break;
 	}
@@ -196,4 +205,39 @@ void Input::deleteLastChar() {
 	text << newT;
 
 	input.setString(text.str());
+}
+
+void Input::addSlash()
+{
+	string t = input.getString();
+	string newT = "";
+
+	for (int i = 0; i < (int)t.length(); i++) {
+		newT += t[i];
+	}
+
+	text.str("");
+	text << t;
+	input.setString(text.str() + "_");
+}
+
+bool Input::validate()
+{
+	if (getText().size() < 1) {
+		return false;
+	}
+
+	
+	if (isNumber) {
+		try
+		{
+			stoi(getText());
+		}
+		catch (const std::exception&)
+		{
+			return false;
+		}
+	}
+
+	return true;
 }

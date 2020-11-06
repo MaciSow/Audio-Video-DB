@@ -2,29 +2,124 @@
 #include "MainController.h"
 
 MainController::MainController() {
-    list = nullptr;
+	list = nullptr;
 }
 
 void MainController::home() {
-    File *f1 = new File();
+	File* f1 = new File();
 
-    this->list = f1->readData("resources/Carrier.txt");
-//    this->list = f1->readData("../db.yaml");
+	this->list = f1->readData("resources/Carrier.txt");
+	//    this->list = f1->readData("../db.yaml");
 
-    //view->showList(list);
-//    f1->saveData(this->list,"../Final.txt");
+		//view->showList(list);
+	//    f1->saveData(this->list,"../Final.txt");
 }
 
 Position* MainController::getList() {
-    return this->list;
+	return this->list;
 }
 
 void MainController::setList(Position* list) {
-    this->list = list;
+	this->list = list;
 }
 
 void MainController::addElement(Position*& element) {
-    element->addToList(list);
+	element->addToList(list);
+}
+
+void MainController::updateElement(vector<string> data) {
+
+	if (selectedElement == nullptr) {
+		return; 
+	}
+
+	selectedElement->setName(data[0]);
+	selectedElement->setYear(12);
+	selectedElement->setType(data[2]);
+
+	if (AudioCd* audioCd = dynamic_cast<AudioCd*>(selectedElement)) {
+		audioCd->setSize(stof(data[3]));
+	}
+	else if (AudioTape* audioTape = dynamic_cast<AudioTape*>(selectedElement)) {
+		audioTape->setLength(stof(data[4]));
+	}
+	else if (VideoCd* videoCd = dynamic_cast<VideoCd*>(selectedElement)) {
+		videoCd->setSize(stof(data[3]));
+		videoCd->setGenre(data[5]);
+	}
+	else if (VideoTape* videoTape = dynamic_cast<VideoTape*>(selectedElement)) {
+		videoTape->setLength(stof(data[4]));
+		videoTape->setGenre(data[5]);
+	}
+}
+
+void MainController::updatePerson(vector<string> data) {
+	if (selectedActor == nullptr) {
+		return;
+	}
+
+	selectedActor->setName(data[0]);
+	selectedActor->setSurname(data[1]);
+	selectedActor->setRole(data[2]);
+}
+
+void MainController::updateSong(vector<string> data){
+	if (selectedSong == nullptr) {
+		return;
+	}
+
+	selectedSong->setTitle(data[0]);
+	selectedSong->setLength(stof(data[1]));
+}
+
+void MainController::addArtist(Artist* artist) {
+	if (artist == nullptr) {
+		return;
+	}
+
+	newArtists.push_back(artist);
+
+	if (selectedSong != nullptr) {
+		selectedSong->addArtist(artist);
+	}
+}
+
+void MainController::addActor(Actor* actor) {
+	if (actor == nullptr) {
+		return;
+	}
+
+	if (selectedElement == nullptr) {
+		newActors.push_back(actor);
+		return;
+	}
+
+	if (VideoCd* videoCd = dynamic_cast<VideoCd*>(selectedElement)) {
+		videoCd->addActor(actor);
+	}
+	else if (VideoTape* videoTape = dynamic_cast<VideoTape*>(selectedElement)) {
+		videoTape->addActor(actor);;
+	}
+}
+
+void MainController::addSong(Song* song) {
+	if (song == nullptr) {
+		return;
+	}
+
+	if (selectedElement == nullptr) {
+		newSongs.push_back(song);
+	}
+	else {
+		if (AudioCd* audioCd = dynamic_cast<AudioCd*>(selectedElement)) {
+			audioCd->addSong(song);
+		}
+		else if (AudioTape* audioTape = dynamic_cast<AudioTape*>(selectedElement)) {
+			audioTape->addSong(song);
+		}
+	}
+
+	newArtists.clear();
 }
 
 
@@ -68,7 +163,7 @@ void MainController::addElement(Position*& element) {
 //    songs.push_back(song);
 //
 //    if (type == AUDIO_CD) {
-        //Position *audioCd = new AudioCd(data[0], stoi(data[1]), data[2], songs, stof(data[3]));
+		//Position *audioCd = new AudioCd(data[0], stoi(data[1]), data[2], songs, stof(data[3]));
 //        return audioCd;
 //    }
 //    Position *audioTape = new AudioTape(data[0], stoi(data[1]), data[2], songs, stof(data[3]));
@@ -106,12 +201,12 @@ void MainController::addElement(Position*& element) {
 //    }
 //}
 
-Position *MainController::searchElementByName(Position *list, string name) {
-    while(list){
-        if (list->getName()== name){
-            return list;
-        }
-        list = list->nextP;
-    }
-    return nullptr;
+Position* MainController::searchElementByName(Position* list, string name) {
+	while (list) {
+		if (list->getName() == name) {
+			return list;
+		}
+		list = list->nextP;
+	}
+	return nullptr;
 }

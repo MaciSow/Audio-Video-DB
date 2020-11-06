@@ -18,7 +18,9 @@ public:
 
     const vector<Actor *> &getCast() const;
 
-    void setCast(const vector<Actor *> &cast);
+    void setCast(const vector<Actor*>& cast);
+
+    void addActor(Actor *& actor);
 
     void deleteActor(Actor*& actor);
 };

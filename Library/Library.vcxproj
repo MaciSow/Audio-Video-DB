@@ -172,6 +172,7 @@
     <ClCompile Include="View\Pages\CreatePersonPage.cpp" />
     <ClCompile Include="View\Pages\CreateSongPage.cpp" />
     <ClCompile Include="View\Pages\DetailsPage.cpp" />
+    <ClCompile Include="View\Pages\EditPage.cpp" />
     <ClCompile Include="View\Pages\ExitPage.cpp" />
     <ClCompile Include="View\Pages\HomePage.cpp" />
     <ClCompile Include="View\Pages\ListPage.cpp" />
@@ -201,6 +202,7 @@
     <ClInclude Include="View\Pages\CreatePersonPage.h" />
     <ClInclude Include="View\Pages\CreateSongPage.h" />
     <ClInclude Include="View\Pages\DetailsPage.h" />
+    <ClInclude Include="View\Pages\EditPage.h" />
     <ClInclude Include="View\Pages\ExitPage.h" />
     <ClInclude Include="View\Pages\HomePage.h" />
     <ClInclude Include="View\Pages\ListPage.h" />

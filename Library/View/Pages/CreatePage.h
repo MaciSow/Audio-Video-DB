@@ -33,12 +33,13 @@ private:
 	Button* btnSave;
 	Button* btnCancel;
 
-
+	
 	void createElements();
 	void saveData();
 	void reset();
 	void checkCarrier();
 	void changeCarrier(Button*& button);
+	bool isValid();
 
 public:
 	CreatePage(MainController*& controller, RenderWindow*& window, Font& font);

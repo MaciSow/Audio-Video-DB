@@ -10,6 +10,7 @@ GraphicView::GraphicView(MainController*& ctr) {
 	detailsPage = new DetailsPage(controller, window, font);
 	songActorPage = new SongActorPage(controller, window, font);
 	createPage = new CreatePage(controller, window, font);
+	editPage = new EditPage(controller, window, font);
 	createSongPage = new CreateSongPage(controller, window, font);
 	createArtistPage = new CreatePersonPage(controller, window, font, true);
 	createActorPage = new CreatePersonPage(controller, window, font, false);
@@ -29,7 +30,6 @@ void GraphicView::start() {
 				if (event.key.code == Keyboard::Escape) {
 					window->close();
 				}
-
 				break;
 
 			case Event::TextEntered:
@@ -56,7 +56,6 @@ void GraphicView::start() {
 				break;
 			}
 		}
-
 
 		window->clear();
 		createBackground();
@@ -87,6 +86,10 @@ void GraphicView::textEnteredHandle(Event& event) {
 		createActorPage->textEntered(event);
 		break;
 
+	case edit:
+		editPage->textEntered(event);
+		break;
+
 	case save:
 		savePage->textEntered(event);
 		break;
@@ -110,8 +113,8 @@ void GraphicView::mouseMovedHandle() {
 		if (listPage->isMouseOver()) {
 			isCursorChange = true;
 		}
-		break;	
-	
+		break;
+
 	case details:
 		if (detailsPage->isMouseOver()) {
 			isCursorChange = true;
@@ -140,13 +143,20 @@ void GraphicView::mouseMovedHandle() {
 		if (createArtistPage->isMouseOver()) {
 			isCursorChange = true;
 		}
-		break;	
-	
+		break;
+
 	case createActor:
 		if (createActorPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
+
+	case edit:
+		if (editPage->isMouseOver()) {
+			isCursorChange = true;
+		}
+		break;
+
 
 	case save:
 		if (savePage->isMouseOver()) {
@@ -181,12 +191,12 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 
 		case collection:
 			page = listPage->mouseClick();
-			break;		
-		
+			break;
+
 		case details:
 			page = detailsPage->mouseClick();
 			break;
-					
+
 		case songActor:
 			page = songActorPage->mouseClick();
 			break;
@@ -201,10 +211,14 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 
 		case createArtist:
 			page = createArtistPage->mouseClick();
-			break;		
-		
+			break;
+
 		case createActor:
 			page = createActorPage->mouseClick();
+			break;
+
+		case edit:
+			page = editPage->mouseClick();
 			break;
 
 		case save:
@@ -225,7 +239,7 @@ void GraphicView::mouseWheelMovedHandle(Event& event) {
 	switch (page) {
 	case collection:
 		listPage->scroll(event.mouseWheel.delta);
-		break;	
+		break;
 
 	case details:
 		detailsPage->scroll(event.mouseWheel.delta);
@@ -238,6 +252,15 @@ void GraphicView::mouseWheelMovedHandle(Event& event) {
 }
 
 void GraphicView::drawPage() {
+
+	//if (controller->selectedActor != nullptr)
+	//{
+	//	cout << "selected" << endl;
+	//}
+	//else {
+	//	cout << "unselected" << endl;
+	//}
+
 	switch (page) {
 	case home:
 		createTitle("Media library");
@@ -247,16 +270,16 @@ void GraphicView::drawPage() {
 	case collection:
 		createTitle("List");
 		listPage->draw();
-		break;	
-	
+		break;
+
 	case details:
 		createTitle("Details: " + controller->selectedElement->getName());
 		createFrame(width - 200, 340, 120);
 		detailsPage->draw();
-		break;	
-	
+		break;
+
 	case songActor:
-		createTitle("Details");
+		createTitle(controller->selectedActor != nullptr ? "Actor details" : "Song details");
 		createFrame(width - 200, 340, 120);
 		songActorPage->draw();
 		break;
@@ -268,7 +291,7 @@ void GraphicView::drawPage() {
 		break;
 
 	case createSong:
-		createTitle("Create song");
+		createTitle(controller->selectedSong != nullptr ? "Edit song" : "Create song");
 		createFrame(width - 200, 410);
 		createSongPage->draw();
 		break;
@@ -277,12 +300,18 @@ void GraphicView::drawPage() {
 		createTitle("Create artist");
 		createFrame(width - 200, 410);
 		createArtistPage->draw();
-		break;	
-	
+		break;
+
 	case createActor:
-		createTitle("Create actor");
+		createTitle(controller->selectedActor != nullptr ? "Edit actor" : "Create actor");
 		createFrame(width - 200, 410);
 		createActorPage->draw();
+		break;
+
+	case edit:
+		createTitle("Edit");
+		createFrame(width - 200, 410);
+		editPage->draw();
 		break;
 
 	case save:
@@ -324,10 +353,11 @@ void GraphicView::createTitle(string title) {
 	window->draw(line);
 }
 
-void GraphicView::createFrame(float width, float height, float offsetY) {
+void GraphicView::createFrame(int width, int height, int offsetY) {
 	RectangleShape frame;
-	frame.setSize(Vector2f(width, height));
-	frame.move((this->width - width) / 2, offsetY);
+
+	frame.setSize({ (float)width, (float)height });
+	frame.setPosition((float)(this->width - width) / 2, (float)offsetY);
 	frame.setFillColor({ 255, 255, 255, 160 });
 
 	window->draw(frame);

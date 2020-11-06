@@ -19,6 +19,10 @@ void Song::setArtists(const vector<Artist *> &artists) {
     Song::artists = artists;
 }
 
+void Song::addArtist(Artist *& artist) {
+    artists.push_back(artist);
+}
+
 float Song::getLength() const {
     return length;
 }

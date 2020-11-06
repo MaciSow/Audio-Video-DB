@@ -1,2 +1,5 @@
-﻿  CreatePersonPage.cpp
+﻿  CreatePage.cpp
+  CreateSongPage.cpp
+  EditPage.cpp
+  Generating Code...
   Library.vcxproj -> D:\c\Library\Debug\Library.exe

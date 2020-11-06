@@ -22,8 +22,13 @@ class CreatePersonPage{
 
 	bool isArtist = true;
 
+	bool isOpen = false;
+
 	void createElements();
+	void fillInputs();
 	void saveData();
+	void clear();
+	bool isValid();
 
 public:
 	CreatePersonPage(MainController*& controller, RenderWindow*& window, Font& font, bool isArtist);

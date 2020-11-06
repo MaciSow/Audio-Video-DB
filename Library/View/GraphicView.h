@@ -5,6 +5,7 @@
 #include "Elements/Button.h"
 #include "Elements/Input.h"
 #include "Pages/CreatePage.h"
+#include "Pages/EditPage.h"
 #include "Pages/CreateSongPage.h"
 #include "Pages/CreatePersonPage.h"
 #include "Pages/HomePage.h"
@@ -38,6 +39,7 @@ private:
 	DetailsPage* detailsPage;
 	SongActorPage* songActorPage;
 	CreatePage* createPage;
+	EditPage* editPage;
 	CreateSongPage* createSongPage;
 	CreatePersonPage* createArtistPage;
 	CreatePersonPage* createActorPage;
@@ -54,7 +56,7 @@ private:
 	void loadFont();
 	void createWindow();
 	void createTitle(string title);
-	void createFrame(float width, float height, float offsetY = 80);
+	void createFrame(int width, int height, int offsetY = 80);
 	void createBackground();
 
 public:

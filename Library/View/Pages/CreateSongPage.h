@@ -21,8 +21,13 @@ class CreateSongPage{
 	Button* btnSave;
 	Button* btnCancel;
 
+	bool isOpen = false;
+
 	void createElements();
+	void fillInputs();
 	void saveData();
+	void clear();
+	bool isValid();
 
 public:
 	CreateSongPage(MainController*& controller, RenderWindow*& window, Font& font);

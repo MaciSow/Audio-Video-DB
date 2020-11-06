@@ -1,0 +1,45 @@
+﻿  Controller.cpp
+  MainController.cpp
+  main.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Audio.cpp
+  AudioCd.cpp
+  AudioTape.cpp
+  Actor.cpp
+  Artist.cpp
+  File.cpp
+  Person.cpp
+  Song.cpp
+  Position.cpp
+  Video.cpp
+  VideoCd.cpp
+  VideoTape.cpp
+  Button.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Input.cpp
+D:\c\Library\Library\View\Elements\Input.h(4,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  ListItem.cpp
+D:\c\Library\Library\View\Elements\ListItem.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  GraphicView.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  CreatePage.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Generating Code...
+  Compiling...
+  CreatePersonPage.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  CreateSongPage.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  DetailsPage.cpp
+D:\c\Library\Library\View\Pages\DetailsPage.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  ExitPage.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  HomePage.cpp
+D:\c\Library\Library\View\Pages\HomePage.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  ListPage.cpp
+D:\c\Library\Library\View\Pages\ListPage.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  SavePage.cpp
+D:\c\Library\Library\View\Elements\Button.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  SongActorPage.cpp
+D:\c\Library\Library\View\Pages\SongActorPage.h(3,10): fatal error C1083: Cannot open include file: 'SFML/Graphics.hpp': No such file or directory
+  Generating Code...

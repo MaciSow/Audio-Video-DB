@@ -28,7 +28,7 @@ bool CreateSongPage::isMouseOver() {
 		isCursorOver = true;
 	}
 
-	if (btnSave->isMouseOver(window)) {
+	if (btnSave->isMouseOver(window) && isValid()) {
 		isCursorOver = true;
 	}
 
@@ -45,23 +45,29 @@ Page CreateSongPage::mouseClick() {
 	}
 
 	if (btnAddArtist->isClick(window)) {
-
 		return createArtist;
 	}
 
-	if (btnSave->isClick(window)) {
+	if (btnSave->isClick(window) && isValid()) {
 		saveData();
-		for (Input* input : inputs) {
-			input->clear();
+		clear();
+
+		if (controller->selectedSong != nullptr) {
+			return songActor;
 		}
-		return create;
+
+
+		return controller->isCreating ? create : details;
 	}
 
 	if (btnCancel->isClick(window)) {
-		for (Input* input : inputs) {
-			input->clear();
+		clear();
+
+		if (controller->selectedSong != nullptr) {
+			return songActor;
 		}
-		return create;
+
+		return controller->isCreating ? create : details;
 	}
 
 	return createSong;
@@ -69,12 +75,21 @@ Page CreateSongPage::mouseClick() {
 
 
 void CreateSongPage::draw() {
+	if (!isOpen && controller->selectedSong != nullptr) {
+		fillInputs();
+		isOpen = true;
+	}
+
 	for (Input* input : inputs) {
 		input->drawTo(window);
 	}
 
 	btnAddArtist->drawTo(window);
-	btnSave->drawTo(window);
+
+	if (isValid()) {
+		btnSave->drawTo(window);
+	}
+
 	btnCancel->drawTo(window);
 }
 
@@ -87,20 +102,55 @@ void CreateSongPage::createElements() {
 	inputs.push_back(new Input({ center - 290, 200 }, font, "Title:", 580, "title"));;
 	inputs.push_back(new Input({ center - 290, 280 }, font, "Length:", 280, "length"));;
 
+	inputs[1]->setIsNumber();
+
 	btnAddArtist = new Button({ (float)(center - 125), 420 }, "ADD ARTIST", font);
 	btnSave = new Button({ (float)(center - 260), 500 }, "OK", font);
 	btnCancel = new Button({ (float)(center + 10), 500 }, "CANCEL", font);
 	btnCancel->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
 }
 
-void CreateSongPage::saveData() {
+void CreateSongPage::fillInputs()
+{
+	Song* song = controller->selectedSong;
+	inputs[0]->setValue(song->getTitle());
+	inputs[1]->setValue(to_string((int)song->getLength()));
+}
 
+void CreateSongPage::saveData() {
 	vector<string> data;
 
 	for (Input* input : inputs) {
 		data.push_back(input->getText());
 	}
 
-	controller->newSongs.push_back(new Song(data[0], controller->newArtists, stof(data[1])));
-	controller->newArtists.clear();
+	if (controller->selectedSong != nullptr) {
+		controller->updateSong(data);
+		return;
+	}
+
+	controller->addSong(new Song(data[0], controller->newArtists, stof(data[1])));
+
+}
+
+void CreateSongPage::clear() {
+	isOpen = false;
+	for (Input* input : inputs) {
+		input->clear();
+	}
+
+
+}
+
+bool CreateSongPage::isValid()
+{
+	bool isValid = true;
+
+	for (Input* input : inputs) {
+		if (!input->validate()) {
+			isValid = false;
+		}
+	}
+
+	return isValid;
 }

@@ -10,8 +10,10 @@ enum Page {
     createSong,
     createArtist,
     createActor,
+    edit,
     save,
     exitView
+    
 };
 
 #endif  //LIBRARY_VIEW_PAGE_H

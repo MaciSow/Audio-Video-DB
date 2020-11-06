@@ -46,7 +46,7 @@ bool CreatePage::isMouseOver() {
 		isCursorOver = true;
 	}
 
-	if (btnSave->isMouseOver(window)) {
+	if (btnSave->isMouseOver(window) && isValid()) {
 		isCursorOver = true;
 	}
 
@@ -63,6 +63,7 @@ Page CreatePage::mouseClick() {
 	}
 
 	for (Button* button : carrierChoice) {
+
 		if (button->isClick(window)) {
 			for (Input* input : inputs) {
 				input->clear();
@@ -72,15 +73,15 @@ Page CreatePage::mouseClick() {
 		}
 	}
 
-	if (carrier<=1 && btnAddSong->isClick(window)) {
+	if (carrier <= 1 && btnAddSong->isClick(window)) {
 		return createSong;
 	}
 
 	if (carrier >= 2 && btnAddCast->isClick(window)) {
 		return createActor;
-	}	
-	
-	if (btnSave->isClick(window)) {
+	}
+
+	if (btnSave->isClick(window) && isValid()) {
 		saveData();
 		reset();
 		for (Input* input : inputs) {
@@ -92,7 +93,7 @@ Page CreatePage::mouseClick() {
 	if (btnCancel->isClick(window)) {
 		reset();
 		for (Input* input : inputs) {
-			
+
 			input->clear();
 		}
 		return home;
@@ -104,6 +105,7 @@ Page CreatePage::mouseClick() {
 
 
 void CreatePage::draw() {
+	controller->isCreating = true;
 
 	switch (carrier)
 	{
@@ -143,8 +145,13 @@ void CreatePage::draw() {
 	for (Button* button : carrierChoice) {
 		button->drawTo(window);
 	}
-	
-	btnSave->drawTo(window);
+
+
+	if (isValid()) {
+		btnSave->drawTo(window);
+	}
+
+
 	btnCancel->drawTo(window);
 }
 
@@ -162,19 +169,21 @@ void CreatePage::createElements() {
 	carrierChoice[0]->setActive(true);
 	checkCarrier();
 
-	inputs.push_back(new Input({ center - 290, 200 }, font, "Name:", 580, "name"));;
-	inputs.push_back(new Input({ center - 290, 270 }, font, "Year:", 280, "year"));;
-	inputs.push_back(new Input({ center + 10, 270 }, font, "Type:", 280, "type"));;
-	inputs.push_back(new Input({ center - 290, 340 }, font, "Size:", 280, "size"));;
-	inputs.push_back(new Input({ center - 290, 340 }, font, "Length:", 280, "length"));;
-	inputs.push_back(new Input({ center + 10, 340 }, font, "Genre:", 280, "genre"));;
+	inputs.push_back(new Input({ center - 290, 200 }, font, "Name:", 580, "name"));
+	inputs.push_back(new Input({ center - 290, 270 }, font, "Year:", 280, "year"));
+	inputs.push_back(new Input({ center + 10, 270 }, font, "Type:", 280, "type"));
+	inputs.push_back(new Input({ center - 290, 340 }, font, "Size:", 280, "size"));
+	inputs.push_back(new Input({ center - 290, 340 }, font, "Length:", 280, "length"));
+	inputs.push_back(new Input({ center + 10, 340 }, font, "Genre:", 280, "genre"));
+
+	inputs[3]->setIsNumber();
+	inputs[4]->setIsNumber();
 
 	btnAddSong = new Button({ (float)(center - 125), 420 }, "ADD SONG", font);
 	btnAddCast = new Button({ (float)(center - 125), 420 }, "ADD CAST", font);
 	btnSave = new Button({ (float)(center - 260), 500 }, "OK", font);
 	btnCancel = new Button({ (float)(center + 10), 500 }, "CANCEL", font);
 	btnCancel->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
-
 }
 
 
@@ -186,36 +195,35 @@ void CreatePage::saveData() {
 	}
 
 	Position* element;
-	//Position* element = controller->newElement;
-	cout << carrier;
-		switch (carrier)
-		{
-		case audio_cd:
-			element = new AudioCd(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[3]));
 
-			break;
-		case audio_tape:
-			element = new AudioTape(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[4]));
-			break;
-		case video_cd:
-			element = new VideoCd(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[3]));
-			break;
-		case video_tape:
-			element = new VideoTape(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[4]));
+	switch (carrier)
+	{
+	case audio_cd:
+		element = new AudioCd(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[3]));
 
-			break;
-		default:
-			break;
-		}
-	
+		break;
+	case audio_tape:
+		element = new AudioTape(data[0], stoi(data[1]), data[2], controller->newSongs, stof(data[4]));
+		break;
+	case video_cd:
+		element = new VideoCd(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[3]));
+		break;
+	case video_tape:
+		element = new VideoTape(data[0], stoi(data[1]), data[2], data[5], controller->newActors, stof(data[4]));
+
+		break;
+	default:
+		break;
+	}
+
 	controller->addElement(element);
 }
 
-void CreatePage::reset()
-{
+void CreatePage::reset() {
 	controller->newSongs.clear();
 	controller->newActors.clear();
 	controller->newArtists.clear();
+	controller->isCreating = false;
 }
 
 void CreatePage::checkCarrier() {
@@ -250,6 +258,37 @@ void CreatePage::changeCarrier(Button*& button) {
 		button->isMouseOver(window);
 	}
 	button->setActive(true);
+}
+
+bool CreatePage::isValid()
+{
+	bool isValid = true;
+
+	if (!inputs[0]->validate()) isValid = false;
+	if (!inputs[1]->validate()) isValid = false;
+	if (!inputs[2]->validate()) isValid = false;
+
+	switch (carrier)
+	{
+	case audio_cd:
+		if (!inputs[3]->validate()) isValid = false;
+		break;
+	case audio_tape:
+		if (!inputs[4]->validate()) isValid = false;
+		break;
+	case video_cd:
+		if (!inputs[3]->validate()) isValid = false;
+		if (!inputs[5]->validate()) isValid = false;
+		break;
+	case video_tape:
+		if (!inputs[4]->validate()) isValid = false;
+		if (!inputs[5]->validate()) isValid = false;
+		break;
+	default:
+		break;
+	}
+
+	return isValid;
 }
 
 
