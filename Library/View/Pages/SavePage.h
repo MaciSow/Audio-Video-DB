@@ -4,7 +4,7 @@
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
 #include "../../Controller/MainController.h"
-#include "Page.h"
+#include "PageName.h"
 #include "iostream"
 
 using namespace std;
@@ -12,19 +12,18 @@ using namespace sf;
 
 class SavePage {
    private:
-       MainController*controller;
+    MainController*controller;
     RenderWindow *window;
     Font font;
 
-    Input *inputFileName;
+    Input* inputFileName;
 
     Button *btnSave;
     Button *btnCancel;
 
-    string defaultFileName = "file.txt";
-
     void createElements();
     void saveData();
+    void clear();
 
    public:
     SavePage(MainController*&controller, RenderWindow *&window, Font &font);
@@ -32,7 +31,7 @@ class SavePage {
 
     void textEntered(Event &event);
     bool isMouseOver();
-    Page mouseClick();
+    PageName mouseClick();
     void draw();
 };
 

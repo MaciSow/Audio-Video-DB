@@ -42,7 +42,7 @@ bool EditPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page EditPage::mouseClick() {
+PageName EditPage::mouseClick() {
 	for (Input* input : inputs) {
 		input->checkSelection(window);
 	}
@@ -53,7 +53,7 @@ Page EditPage::mouseClick() {
 		for (Input* input : inputs) {
 			input->clear();
 		}
-		return details;
+		return PageName::details;
 	}
 
 	if (btnCancel->isClick(window)) {
@@ -61,10 +61,10 @@ Page EditPage::mouseClick() {
 		for (Input* input : inputs) {
 			input->clear();
 		}
-		return details;
+		return PageName::details;
 	}
 
-	return edit;
+	return PageName::edit;
 }
 
 

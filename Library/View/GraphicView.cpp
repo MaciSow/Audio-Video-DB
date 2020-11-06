@@ -4,7 +4,7 @@ GraphicView::GraphicView(MainController*& ctr) {
 	this->controller = ctr;
 
 	createWindow();
-	page = home;
+	pageName = PageName::home;
 	homePage = new HomePage(controller, window, font);
 	listPage = new ListPage(controller, window, font);
 	detailsPage = new DetailsPage(controller, window, font);
@@ -62,35 +62,41 @@ void GraphicView::start() {
 		drawPage();
 		window->setMouseCursor(cursor);
 		window->display();
+
+		if (pageName == PageName::exitProgram)
+		{
+			cleanPage();
+			window->close();
+		}
 	}
 }
 
 void GraphicView::textEnteredHandle(Event& event) {
-	switch (page) {
-	case home:
+	switch (pageName) {
+	case PageName::home:
 		break;
 
-	case create:
+	case PageName::create:
 		createPage->textEntered(event);
 		break;
 
-	case createSong:
+	case PageName::createSong:
 		createSongPage->textEntered(event);
 		break;
 
-	case createArtist:
+	case PageName::createArtist:
 		createArtistPage->textEntered(event);
 		break;
 
-	case createActor:
+	case PageName::createActor:
 		createActorPage->textEntered(event);
 		break;
 
-	case edit:
+	case PageName::edit:
 		editPage->textEntered(event);
 		break;
 
-	case save:
+	case PageName::save:
 		savePage->textEntered(event);
 		break;
 
@@ -102,69 +108,69 @@ void GraphicView::textEnteredHandle(Event& event) {
 void GraphicView::mouseMovedHandle() {
 	bool isCursorChange = false;
 
-	switch (page) {
-	case home:
+	switch (pageName) {
+	case PageName::home:
 		if (homePage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case collection:
+	case PageName::list:
 		if (listPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case details:
+	case PageName::details:
 		if (detailsPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case songActor:
+	case PageName::songActor:
 		if (songActorPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case create:
+	case PageName::create:
 		if (createPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case createSong:
+	case PageName::createSong:
 		if (createSongPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case createArtist:
+	case PageName::createArtist:
 		if (createArtistPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case createActor:
+	case PageName::createActor:
 		if (createActorPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case edit:
+	case PageName::edit:
 		if (editPage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
 
-	case save:
+	case PageName::save:
 		if (savePage->isMouseOver()) {
 			isCursorChange = true;
 		}
 		break;
 
-	case exitView:
+	case PageName::exitView:
 		if (exitPage->isMouseOver()) {
 			isCursorChange = true;
 		}
@@ -184,49 +190,50 @@ void GraphicView::mouseMovedHandle() {
 
 void GraphicView::mouseButtonPressedHandle(Event& event) {
 	if (event.key.code == (int)Mouse::Left) {
-		switch (page) {
-		case home:
-			page = homePage->mouseClick();
+		switch (pageName) {
+
+		case PageName::home:
+			pageName = homePage->mouseClick();
 			break;
 
-		case collection:
-			page = listPage->mouseClick();
+		case PageName::list:
+			pageName = listPage->mouseClick();
 			break;
 
-		case details:
-			page = detailsPage->mouseClick();
+		case PageName::details:
+			pageName = detailsPage->mouseClick();
 			break;
 
-		case songActor:
-			page = songActorPage->mouseClick();
+		case PageName::songActor:
+			pageName = songActorPage->mouseClick();
 			break;
 
-		case create:
-			page = createPage->mouseClick();
+		case PageName::create:
+			pageName = createPage->mouseClick();
 			break;
 
-		case createSong:
-			page = createSongPage->mouseClick();
+		case PageName::createSong:
+			pageName = createSongPage->mouseClick();
 			break;
 
-		case createArtist:
-			page = createArtistPage->mouseClick();
+		case PageName::createArtist:
+			pageName = createArtistPage->mouseClick();
 			break;
 
-		case createActor:
-			page = createActorPage->mouseClick();
+		case PageName::createActor:
+			pageName = createActorPage->mouseClick();
 			break;
 
-		case edit:
-			page = editPage->mouseClick();
+		case PageName::edit:
+			pageName = editPage->mouseClick();
 			break;
 
-		case save:
-			page = savePage->mouseClick();
+		case PageName::save:
+			pageName = savePage->mouseClick();
 			break;
 
-		case exitView:
-			page = exitPage->mouseClick();
+		case PageName::exitView:
+			pageName = exitPage->mouseClick();
 			break;
 
 		default:
@@ -236,91 +243,81 @@ void GraphicView::mouseButtonPressedHandle(Event& event) {
 }
 
 void GraphicView::mouseWheelMovedHandle(Event& event) {
-	switch (page) {
-	case collection:
+	switch (pageName) {
+	case PageName::list:
 		listPage->scroll(event.mouseWheel.delta);
 		break;
 
-	case details:
+	case PageName::details:
 		detailsPage->scroll(event.mouseWheel.delta);
 		break;
 
 	default:
 		break;
 	};
-	// cout << "Scroll: " << event.mouseWheel.delta << endl;
 }
 
 void GraphicView::drawPage() {
-
-	//if (controller->selectedActor != nullptr)
-	//{
-	//	cout << "selected" << endl;
-	//}
-	//else {
-	//	cout << "unselected" << endl;
-	//}
-
-	switch (page) {
-	case home:
+	switch (pageName) {
+	case PageName::home:
 		createTitle("Media library");
 		homePage->draw();
 		break;
 
-	case collection:
+	case PageName::list:
 		createTitle("List");
 		listPage->draw();
 		break;
 
-	case details:
+	case PageName::details:
 		createTitle("Details: " + controller->selectedElement->getName());
 		createFrame(width - 200, 340, 120);
 		detailsPage->draw();
 		break;
 
-	case songActor:
+	case PageName::songActor:
 		createTitle(controller->selectedActor != nullptr ? "Actor details" : "Song details");
 		createFrame(width - 200, 340, 120);
 		songActorPage->draw();
 		break;
 
-	case create:
+	case PageName::create:
 		createTitle("Create element");
 		createFrame(width - 200, 410);
 		createPage->draw();
 		break;
 
-	case createSong:
+	case PageName::createSong:
 		createTitle(controller->selectedSong != nullptr ? "Edit song" : "Create song");
 		createFrame(width - 200, 410);
 		createSongPage->draw();
 		break;
 
-	case createArtist:
+	case PageName::createArtist:
 		createTitle("Create artist");
 		createFrame(width - 200, 410);
 		createArtistPage->draw();
 		break;
 
-	case createActor:
+	case PageName::createActor:
 		createTitle(controller->selectedActor != nullptr ? "Edit actor" : "Create actor");
 		createFrame(width - 200, 410);
 		createActorPage->draw();
 		break;
 
-	case edit:
+	case PageName::edit:
 		createTitle("Edit");
 		createFrame(width - 200, 410);
 		editPage->draw();
 		break;
 
-	case save:
+	case PageName::save:
 		createTitle("Save file");
 		createFrame(width - 200, 300, height / 2 - 150);
 		savePage->draw();
 		break;
 
-	case exitView:
+	case PageName::exitView:
 		createTitle("Exit");
 		createFrame(width - 200, 300, height / 2 - 150);
 		exitPage->draw();
@@ -377,8 +374,24 @@ void GraphicView::createBackground() {
 	window->draw(background);
 }
 
+void GraphicView::cleanPage() {
+	delete homePage;
+	delete listPage;
+	delete detailsPage;
+	delete songActorPage;
+	delete createPage;
+	delete editPage;
+	delete createSongPage;
+	delete createArtistPage;
+	delete createActorPage;
+	delete savePage;
+	delete exitPage;
+	controller->clean();
+}
+
 void GraphicView::loadFont() {
 	if (!font.loadFromFile(resourcePath + "font.ttf")) {
 		cout << "Fail load font";
 	}
 }
+

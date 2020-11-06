@@ -206,7 +206,7 @@
     <ClInclude Include="View\Pages\ExitPage.h" />
     <ClInclude Include="View\Pages\HomePage.h" />
     <ClInclude Include="View\Pages\ListPage.h" />
-    <ClInclude Include="View\Pages\Page.h" />
+    <ClInclude Include="View\Pages\PageName.h" />
     <ClInclude Include="View\Pages\SavePage.h" />
     <ClInclude Include="View\Pages\SongActorPage.h" />
   </ItemGroup>

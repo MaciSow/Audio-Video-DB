@@ -3,20 +3,17 @@
 
 MainController::MainController() {
 	list = nullptr;
+	f1 = new File();
+	this->list = f1->readData(path + filename);
 }
 
-void MainController::home() {
-	File* f1 = new File();
-
-	this->list = f1->readData("resources/Carrier.txt");
-	//    this->list = f1->readData("../db.yaml");
-
-		//view->showList(list);
-	//    f1->saveData(this->list,"../Final.txt");
-}
 
 Position* MainController::getList() {
 	return this->list;
+}
+
+string MainController::getFilename() {
+	return filename;
 }
 
 void MainController::setList(Position* list) {
@@ -70,6 +67,21 @@ void MainController::updateSong(vector<string> data){
 
 	selectedSong->setTitle(data[0]);
 	selectedSong->setLength(stof(data[1]));
+}
+
+void MainController::save(string filename) {
+	if (filename == "") {
+		filename = this->filename;
+	}
+	f1->saveData(list, path + filename);
+}
+
+void MainController::clean(){
+	while (list) {
+		Position* tmp = list->nextP;
+		delete list;
+		list = tmp;
+	}
 }
 
 void MainController::addArtist(Artist* artist) {

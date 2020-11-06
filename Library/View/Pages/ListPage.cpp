@@ -26,22 +26,22 @@ bool ListPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page ListPage::mouseClick() {
+PageName ListPage::mouseClick() {
 	if (btnBack->isClick(window)) {
 		controller->selectedElement = nullptr;
 		isOpen = false;
-		return home;
+		return PageName::home;
 	}
 
 	for (auto item : items) {
 		if (item->isClick(window)) {
 			setSelectedElement(item->getId());
 			isOpen = false;
-			return details;
+			return PageName::details;
 		}
 	}
 
-	return collection;
+	return PageName::list;
 }
 
 

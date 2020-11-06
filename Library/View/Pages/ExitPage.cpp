@@ -13,6 +13,7 @@ ExitPage::~ExitPage() {
 bool  ExitPage::isMouseOver() {
 	bool isCursorOver = false;
 	if (btnYes->isMouseOver(window)) {
+		saveData();
 		isCursorOver = true;
 	}
 
@@ -23,18 +24,18 @@ bool  ExitPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page  ExitPage::mouseClick() {
+PageName ExitPage::mouseClick() {
 
 	if (btnYes->isClick(window)) {
 		saveData();
-		window->close();
+		return PageName::exitProgram;
 	}
 
 	if (btnNo->isClick(window)) {
-		window->close();
+		return PageName::exitProgram;
 	}
 
-	return exitView;
+	return PageName::exitView;
 }
 
 void  ExitPage::draw() {
@@ -60,5 +61,5 @@ void  ExitPage::createElements() {
 }
 
 void  ExitPage::saveData() {
-	cout << "Save File" << endl;
+	controller->save("");
 }

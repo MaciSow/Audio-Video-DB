@@ -36,7 +36,7 @@ bool CreatePersonPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page CreatePersonPage::mouseClick() {
+PageName CreatePersonPage::mouseClick() {
 	for (Input* input : inputs) {
 		input->checkSelection(window);
 	}
@@ -46,14 +46,14 @@ Page CreatePersonPage::mouseClick() {
 		clear();
 
 		if (isArtist) {
-			return createSong;
+			return PageName::createSong;
 		}
 
 		if (controller->selectedActor != nullptr) {
-			return songActor;
+			return PageName::songActor;
 		}
 
-		return controller->isCreating ? create : details;
+		return controller->isCreating ? PageName::create : PageName::details;
 
 	}
 
@@ -61,21 +61,21 @@ Page CreatePersonPage::mouseClick() {
 		clear();
 
 		if (isArtist) {
-			return createSong;
+			return PageName::createSong;
 		}
 
 		if (controller->selectedActor != nullptr) {
-			return songActor;
+			return PageName::songActor;
 		}
 
-		return controller->isCreating ? create : details;
+		return controller->isCreating ? PageName::create : PageName::details;
 	}
 
 	if (isArtist) {
-		return createArtist;
+		return PageName::createArtist;
 	}
 	else {
-		return createActor;
+		return PageName::createActor;
 	}
 }
 

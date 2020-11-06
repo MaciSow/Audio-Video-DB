@@ -12,16 +12,9 @@ using namespace std;
 class MainController {
 private:
 	Position* list;
-
-	//ConsoleView *view;
-
-	/*void createElement(Type type);
-
-	Position *createAudio(Type type);
-
-	Position *createVideo(Type type);
-
-	void editElement(Position *&element);*/
+	File* f1;
+	string path = "resources/";
+	string filename = "Carrier.txt";
 
 	Position* searchElementByName(Position* list, string name);
 
@@ -37,10 +30,10 @@ public:
 	bool isCreating = false;
 
 	MainController();
-	void home();
-	Position* getList();
-	void setList(Position* list);
 
+	Position* getList();
+	string getFilename();
+	void setList(Position* list);
 	void addElement(Position*& element);
 	void addArtist(Artist* artist);
 	void addActor(Actor* actor);
@@ -48,6 +41,11 @@ public:
 	void updateElement(vector<string> data);
 	void updatePerson(vector<string> data);
 	void updateSong(vector<string> data);
+
+	void save(string filename);
+
+	void clean();
+
 };
 
 #endif //VIDEO_AUDIODB_MAINCONTROLLER_H

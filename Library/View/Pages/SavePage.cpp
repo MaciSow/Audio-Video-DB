@@ -31,23 +31,21 @@ bool SavePage::isMouseOver() {
     return isCursorOver;
 }
 
-Page SavePage::mouseClick() {
+PageName SavePage::mouseClick() {
     inputFileName->checkSelection(window);
 
     if (btnSave->isClick(window)) {
         saveData();
-        inputFileName->clear();
-        inputFileName->setValue(defaultFileName);
-        return home;
+        clear();
+        return PageName::home;
     }
 
     if (btnCancel->isClick(window)) {
-        inputFileName->clear();
-        inputFileName->setValue(defaultFileName);
-        return home;
+        clear();
+        return PageName::home;
     }
 
-    return save;
+    return PageName::save;
 }
 
 void SavePage::draw() {
@@ -63,7 +61,7 @@ void SavePage::createElements() {
     float posx = width / 2 - 125;
 
     inputFileName = new Input({posx, 200}, font, "Filename:");
-    inputFileName->setValue(defaultFileName);
+    inputFileName->setValue(controller->getFilename());
 
     btnSave = new Button({(float)(width / 2 - 260), 300}, "SAVE", font);
     btnCancel = new Button({(float)(width / 2 + 10), 300}, "CANCEL", font);
@@ -71,11 +69,10 @@ void SavePage::createElements() {
 }
 
 void SavePage::saveData() {
-    //if (inputFileName->getText() == defaultFileName) {
-    //controller->log("same file");
-    //return;
-    //}
+    controller->save(inputFileName->getText());
+}
 
-    //controller->log(inputFileName->getText());
-    //return;
+void SavePage::clear() {
+    inputFileName->clear();
+    inputFileName->setValue(controller->getFilename());
 }

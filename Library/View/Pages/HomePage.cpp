@@ -32,24 +32,24 @@ bool HomePage::isMouseOver() {
     return isCursorOver;
 }
 
-Page HomePage::mouseClick() {
+PageName HomePage::mouseClick() {
     if (btnList->isClick(window)) {
-        return collection;
+        return PageName::list;
     }
 
     if (btnCreate->isClick(window)) {
-        return create;
+        return PageName::create;
     }
     
     if (btnSave->isClick(window)) {
-        return save;
+        return PageName::save;
     }
     
     if (btnExit->isClick(window)) {
-        return exitView;
+        return PageName::exitView;
     }
 
-    return home;
+    return PageName::home;
 }
 
 

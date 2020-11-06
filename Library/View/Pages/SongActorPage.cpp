@@ -29,20 +29,20 @@ bool SongActorPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page SongActorPage::mouseClick() {
+PageName SongActorPage::mouseClick() {
 	if (btnBack->isClick(window)) {
 		controller->selectedSong = nullptr;
 		controller->selectedActor = nullptr;
-		return details;
+		return PageName::details;
 	}
 
 	if (btnEdit->isClick(window)) {
 		if (controller->selectedSong) {
-			return createSong;
+			return PageName::createSong;
 		}
 
 		if (controller->selectedActor) {
-			return createActor;
+			return PageName::createActor;
 		}
 	}
 
@@ -67,10 +67,10 @@ Page SongActorPage::mouseClick() {
 
 		controller->selectedSong = nullptr;
 		controller->selectedActor = nullptr;
-		return details;
+		return PageName::details;
 	}
 
-	return songActor;
+	return PageName::songActor;
 }
 
 void SongActorPage::draw() {

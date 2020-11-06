@@ -43,16 +43,16 @@ bool DetailsPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page DetailsPage::mouseClick() {
+PageName DetailsPage::mouseClick() {
 	if (btnBack->isClick(window)) {
 		controller->selectedElement = nullptr;
 		isOpen = false;
-		return collection;
+		return PageName::list;
 	}
 
 	if (btnEdit->isClick(window)) {
 		isOpen = false;
-		return edit;
+		return PageName::edit;
 	}
 
 	if (btnDelete->isClick(window)) {
@@ -62,21 +62,21 @@ Page DetailsPage::mouseClick() {
 
 		controller->selectedElement = nullptr;
 		isOpen = false;
-		return collection;
+		return PageName::list;
 	}
 
 
 	if (isVideo()) {
 		if (btnAddActor->isClick(window)) {
 			isOpen = false;
-			return createActor;
+			return PageName::createActor;
 		}
 	}
 	else {
 		if (btnAddSong->isClick(window)) {
 
 			isOpen = false;
-			return createSong;
+			return PageName::createSong;
 		}
 	}
 
@@ -90,11 +90,11 @@ Page DetailsPage::mouseClick() {
 				controller->selectedActor = cast[item->getId() - 1];
 			}
 			isOpen = false;
-			return songActor;
+			return PageName::songActor;
 		}
 	}
 
-	return details;
+	return PageName::details;
 }
 
 void DetailsPage::scroll(int offset) {

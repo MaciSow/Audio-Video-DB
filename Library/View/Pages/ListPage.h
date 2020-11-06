@@ -5,7 +5,7 @@
 #include "../Elements/Input.h"
 #include "../Elements/ListItem.h"
 #include "../../Controller/MainController.h"
-#include "Page.h"
+#include "PageName.h"
 #include "iostream"
 
 using namespace std;
@@ -41,7 +41,7 @@ class ListPage {
     ~ListPage();
 
     bool isMouseOver();
-    Page mouseClick();
+    PageName mouseClick();
     void scroll(int offset);
     void draw();
   

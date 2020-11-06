@@ -12,7 +12,7 @@
 #include "Pages/ListPage.h"
 #include "Pages/DetailsPage.h"
 #include "Pages/SongActorPage.h"
-#include "Pages/Page.h"
+#include "Pages/PageName.h"
 #include "Pages/SavePage.h"
 #include "Pages/ExitPage.h"
 
@@ -32,7 +32,7 @@ private:
 	bool isUpdate = false;
 	int width = 960;
 	int height = 576;
-	Page page;
+	PageName pageName;
 
 	HomePage* homePage;
 	ListPage* listPage;
@@ -58,15 +58,15 @@ private:
 	void createTitle(string title);
 	void createFrame(int width, int height, int offsetY = 80);
 	void createBackground();
+	void cleanPage();
+
 
 public:
-
-
-
 	GraphicView(MainController*& ctr);
 	~GraphicView();
 
 	void start();
+
 };
 
 #endif  //LIBRARY_VIEW_GRAPHIC_VIEW_H

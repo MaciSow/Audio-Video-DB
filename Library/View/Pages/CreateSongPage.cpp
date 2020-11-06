@@ -39,13 +39,13 @@ bool CreateSongPage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page CreateSongPage::mouseClick() {
+PageName CreateSongPage::mouseClick() {
 	for (Input* input : inputs) {
 		input->checkSelection(window);
 	}
 
 	if (btnAddArtist->isClick(window)) {
-		return createArtist;
+		return PageName::createArtist;
 	}
 
 	if (btnSave->isClick(window) && isValid()) {
@@ -53,24 +53,24 @@ Page CreateSongPage::mouseClick() {
 		clear();
 
 		if (controller->selectedSong != nullptr) {
-			return songActor;
+			return PageName::songActor;
 		}
 
 
-		return controller->isCreating ? create : details;
+		return controller->isCreating ? PageName::create : PageName::details;
 	}
 
 	if (btnCancel->isClick(window)) {
 		clear();
 
 		if (controller->selectedSong != nullptr) {
-			return songActor;
+			return PageName::songActor;
 		}
 
-		return controller->isCreating ? create : details;
+		return controller->isCreating ? PageName::create : PageName::details;
 	}
 
-	return createSong;
+	return PageName::createSong;
 }
 
 

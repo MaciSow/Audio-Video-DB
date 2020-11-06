@@ -57,7 +57,7 @@ bool CreatePage::isMouseOver() {
 	return isCursorOver;
 }
 
-Page CreatePage::mouseClick() {
+PageName CreatePage::mouseClick() {
 	for (Input* input : inputs) {
 		input->checkSelection(window);
 	}
@@ -74,11 +74,11 @@ Page CreatePage::mouseClick() {
 	}
 
 	if (carrier <= 1 && btnAddSong->isClick(window)) {
-		return createSong;
+		return PageName::createSong;
 	}
 
 	if (carrier >= 2 && btnAddCast->isClick(window)) {
-		return createActor;
+		return PageName::createActor;
 	}
 
 	if (btnSave->isClick(window) && isValid()) {
@@ -87,7 +87,7 @@ Page CreatePage::mouseClick() {
 		for (Input* input : inputs) {
 			input->clear();
 		}
-		return home;
+		return PageName::home;
 	}
 
 	if (btnCancel->isClick(window)) {
@@ -96,10 +96,10 @@ Page CreatePage::mouseClick() {
 
 			input->clear();
 		}
-		return home;
+		return PageName::home;
 	}
 
-	return create;
+	return PageName::create;
 
 }
 

@@ -4,7 +4,7 @@
 #include "../Elements/Button.h"
 #include "../Elements/Input.h"
 #include "../../Controller/MainController.h"
-#include "Page.h"
+#include "PageName.h"
 #include "iostream"
 
 using namespace std;
@@ -29,7 +29,7 @@ class  ExitPage {
 
 
     bool isMouseOver();
-    Page mouseClick();
+    PageName mouseClick();
     void draw();
 };
 

@@ -8,16 +8,13 @@ using namespace std;
 
 int main()
 {
-	//Controller *ctr = new Controller();
-
-
-
+	_CrtSetDbgFlag(_CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF);
 	MainController* c1 = new MainController();
-
-	c1->home();
 
 	GraphicView* view = new GraphicView(c1);
 	view->start();
+
+	c1->clean();
 
 	return 0;
 }

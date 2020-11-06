@@ -143,9 +143,6 @@
     <ClInclude Include="View\Pages\ListPage.h">
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
-    <ClInclude Include="View\Pages\Page.h">
-      <Filter>Source Files\View\Pages</Filter>
-    </ClInclude>
     <ClInclude Include="View\Elements\Button.h">
       <Filter>Source Files\View\Elements</Filter>
     </ClInclude>
@@ -213,6 +210,9 @@
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
     <ClInclude Include="View\Pages\EditPage.h">
+      <Filter>Source Files\View\Pages</Filter>
+    </ClInclude>
+    <ClInclude Include="View\Pages\PageName.h">
       <Filter>Source Files\View\Pages</Filter>
     </ClInclude>
   </ItemGroup>
