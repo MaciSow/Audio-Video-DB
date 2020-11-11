@@ -40,24 +40,6 @@ void Position::addToList(Position *&list) {
     }
 }
 
-void Position::addToList2(Position *&element) {
-
-    Position *tmp = nullptr;
-    if (this == tmp) {
-//        this = element;
-    }
-
-//    Position *tmp = this;
-
-    while (this->nextP) {
-        tmp = tmp->nextP;
-    }
-
-    tmp->nextP = element;
-    element->nextP = nullptr;
-
-}
-
 void Position::deleteFromList(Position *&list) {
     if (this->nextP == 0 && this == list) {
         list = 0;

@@ -149,7 +149,6 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="Controller\Controller.cpp" />
     <ClCompile Include="Controller\MainController.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Model\Audio\Audio.cpp" />
@@ -180,7 +179,6 @@
     <ClCompile Include="View\Pages\SongActorPage.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Controller\Controller.h" />
     <ClInclude Include="Controller\MainController.h" />
     <ClInclude Include="Model\Audio\Audio.h" />
     <ClInclude Include="Model\Audio\AudioCd.h" />

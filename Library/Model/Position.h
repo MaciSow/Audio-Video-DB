@@ -14,9 +14,7 @@ protected:
     string type;
 
 public:
-    void addToList(Position *&list);
-
-    void addToList2(Position *&element);
+    void addToList(Position *&list); 
 
     void deleteFromList(Position *&list);
 
@@ -37,8 +35,6 @@ public:
     void setType(const string &type);
 
     virtual ~Position() = default;
-
 };
-
 
 #endif //VIDEO_AUDIODB_POSITION_H

@@ -14,6 +14,8 @@ public:
     float getSize() const;
 
     void setSize(float size);
+
+    operator int();
 };
 
 #endif //VIDEO_AUDIODB_AUDIOCD_H

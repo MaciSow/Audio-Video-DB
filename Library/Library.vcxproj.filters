@@ -66,9 +66,6 @@
     <ClCompile Include="View\Elements\ListItem.cpp">
       <Filter>Source Files\View\Elements</Filter>
     </ClCompile>
-    <ClCompile Include="Controller\Controller.cpp">
-      <Filter>Source Files\Controller</Filter>
-    </ClCompile>
     <ClCompile Include="View\Pages\SavePage.cpp">
       <Filter>Source Files\View\Pages</Filter>
     </ClCompile>
@@ -151,9 +148,6 @@
     </ClInclude>
     <ClInclude Include="View\Elements\ListItem.h">
       <Filter>Source Files\View\Elements</Filter>
-    </ClInclude>
-    <ClInclude Include="Controller\Controller.h">
-      <Filter>Source Files\Controller</Filter>
     </ClInclude>
     <ClInclude Include="View\Pages\SavePage.h">
       <Filter>Source Files\View\Pages</Filter>

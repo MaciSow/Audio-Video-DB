@@ -52,11 +52,11 @@ void  ExitPage::createElements() {
 
 	question = new Text("Do you want save file?", font, 32);
 	float posX = (float)(window->getSize().x / 2 - question->getGlobalBounds().width / 2);
-	question->setPosition({ posX,300 });
+	question->setPosition({ posX,200 });
 	question->setFillColor(Color::Black);
 
-	btnYes = new Button({ (float)(width / 2 - 260), 400 }, "YES", font);
-	btnNo = new Button({ (float)(width / 2 + 10), 400 }, "NO", font);
+	btnYes = new Button({ (float)(width / 2 - 260), 300 }, "YES", font);
+	btnNo = new Button({ (float)(width / 2 + 10), 300 }, "NO", font);
 	btnNo->setColor({ 0, 0, 0, 205 }, { 196, 55, 55, 205 });
 }
 

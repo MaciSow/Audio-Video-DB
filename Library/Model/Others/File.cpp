@@ -295,7 +295,7 @@ void File::printVideoCd(ofstream &File, VideoCd *videoCd) {
 }
 
 void File::printVideoTape(ofstream &File, VideoTape *videoTape) {
-    File << "- class: videoTape\n";
+    File << "- class: VideoTape\n";
     printPositionData(File, videoTape);
     File << "  size: " << videoTape->getLength() << endl;
     File << "  genre: " << videoTape->getGenre() << endl;

@@ -11,6 +11,10 @@ void AudioCd::setSize(float size) {
     AudioCd::size = size;
 }
 
+AudioCd::operator int(){
+    return (int)size;
+}
+
 void AudioCd::update(const string &name, int year, const string &type, const vector<Song *> &songs, float size) {
     this->name = name;
     this->year = year;
